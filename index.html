@@ -1,0 +1,1606 @@
+<!DOCTYPE html><html class="dark" lang="en" style="--autoplay-duration: 4500ms;"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><title>BRYTAN//LABS — Premier Software Engineering &amp; Technical Consultancy</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><style id="contact-cards-custom-styles" class="">
+  .contact-checkbox-card,
+  .contact-radio-card {
+    background-color: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: rgba(255, 255, 255, 0.6) !important;
+    font-weight: 500 !important;
+    box-shadow: none !important;
+    outline: none !important;
+    transition: all 0.2s ease;
+  }
+  .contact-checkbox-card:hover:not(.is-active),
+  .contact-radio-card:hover:not(.is-active) {
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    background-color: rgba(255, 255, 255, 0.06) !important;
+  }
+  .contact-checkbox-card.is-active,
+  .contact-radio-card.is-active,
+  .contact-checkbox-card:has(input:checked),
+  .contact-radio-card:has(input:checked) {
+    background: #3b82f6 !important;
+    border: 1px solid #60a5fa !important;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    box-shadow: 0 0 16px rgba(59, 130, 246, 0.45) !important;
+  }
+</style><link rel="preload" as="image" href="assets/img/bg-dark-2560.webp" imagesrcset="assets/img/bg-dark-1280.webp 1280w, assets/img/bg-dark-2560.webp 2560w" imagesizes="100vw" fetchpriority="high" type="image/webp"></head><body class="bg-background text-on-background antialiased selection:bg-primary-container selection:text-on-primary-container relative min-h-screen overflow-x-hidden font-body-md text-body-md bg-[#0a0e18]"><svg aria-hidden="true" class="inline-defs-container" style="position:absolute;width:0;height:0;overflow:hidden"></svg>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>BRYTAN//LABS — Premier Software Engineering &amp; Technical Consultancy</title>
+<!-- Google Fonts: Space Grotesk, Geist, JetBrains Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS CDN with forms & container queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration verbatim from Design System -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "tertiary-fixed-dim": "#4cd7f6",
+            "inverse-on-surface": "#2c303b",
+            "primary-container": "#4d8eff",
+            "on-primary-fixed-variant": "#004395",
+            "surface-container-lowest": "#0a0e18",
+            "on-secondary": "#3c0091",
+            "primary": "#adc6ff",
+            "surface-container": "#1c1f2a",
+            "error-container": "#93000a",
+            "background": "#0f131d",
+            "tertiary": "#4cd7f6",
+            "on-error-container": "#ffdad6",
+            "on-secondary-fixed-variant": "#5516be",
+            "secondary-fixed-dim": "#d0bcff",
+            "on-primary-fixed": "#001a42",
+            "outline-variant": "#424754",
+            "inverse-primary": "#005ac2",
+            "surface-bright": "#353944",
+            "on-surface-variant": "#c2c6d6",
+            "tertiary-fixed": "#acedff",
+            "surface-dim": "#0f131d",
+            "on-error": "#690005",
+            "on-tertiary": "#003640",
+            "surface": "#0f131d",
+            "surface-container-high": "#262a35",
+            "primary-fixed": "#d8e2ff",
+            "primary-fixed-dim": "#adc6ff",
+            "on-primary-container": "#00285d",
+            "on-tertiary-fixed": "#001f26",
+            "on-background": "#dfe2f1",
+            "on-tertiary-container": "#002f38",
+            "surface-tint": "#adc6ff",
+            "on-secondary-container": "#c4abff",
+            "tertiary-container": "#009eb9",
+            "inverse-surface": "#dfe2f1",
+            "secondary-container": "#571bc1",
+            "outline": "#8c909f",
+            "on-secondary-fixed": "#23005c",
+            "surface-container-low": "#171b26",
+            "surface-container-highest": "#313540",
+            "on-primary": "#002e6a",
+            "surface-variant": "#313540",
+            "error": "#ffb4ab",
+            "secondary-fixed": "#e9ddff",
+            "on-tertiary-fixed-variant": "#004e5c",
+            "secondary": "#d0bcff",
+            "on-surface": "#dfe2f1"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "margin-mobile": "1.25rem",
+            "space-xs": "0.25rem",
+            "gutter-mobile": "1rem",
+            "margin": "3rem",
+            "space-sm": "0.5rem",
+            "gutter": "1.5rem",
+            "space-xl": "2.5rem",
+            "space-lg": "1.5rem",
+            "space-md": "1rem"
+          },
+          "fontFamily": {
+            "headline-md": ["Space Grotesk"],
+            "label-code": ["JetBrains Mono"],
+            "display-mobile": ["Space Grotesk"],
+            "body-lg": ["Geist"],
+            "headline-lg": ["Space Grotesk"],
+            "title-lg": ["Geist"],
+            "body-sm": ["Geist"],
+            "headline-lg-mobile": ["Space Grotesk"],
+            "display": ["Space Grotesk"],
+            "body-md": ["Geist"],
+            "title-md": ["Geist"],
+            "headline-sm": ["Space Grotesk"],
+            "label-caps": ["JetBrains Mono"]
+          },
+          "fontSize": {
+            "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "label-code": ["13px", { "lineHeight": "18px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+            "display-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "title-lg": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+            "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "display": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+            "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "500" }],
+            "headline-sm": ["22px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    /* Custom technical ambient grid pattern */
+    .bg-tech-grid {
+      background-size: 48px 48px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+    }
+    .hero-perspective-grid {
+      background-size: 80px 80px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    }
+    .glow-radial-blue {
+      background: radial-gradient(ellipse 65% 55% at 50% 15%, rgba(77, 142, 255, 0.18), transparent 75%);
+    }
+    .glow-radial-violet {
+      background: radial-gradient(ellipse 50% 50% at 80% 30%, rgba(167, 139, 250, 0.12), transparent 70%);
+    }
+    .glass-card {
+      background: rgba(17, 24, 39, 0.65);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-card-hover:hover {
+      border-color: rgba(77, 142, 255, 0.45);
+      box-shadow: 0 0 24px -4px rgba(59, 130, 246, 0.25);
+    }
+
+    /* CRT scanlines effect */
+    .crt-scanlines {
+      background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.35) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+      background-size: 100% 4px, 6px 100%;
+      pointer-events: none;
+    }
+    .crt-vignette {
+      box-shadow: inset 0 0 45px rgba(0,0,0,0.9), inset 0 0 10px rgba(0,0,0,0.95);
+      pointer-events: none;
+    }
+
+    /* Hide scrollbar for carousel */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Floating Card Animation */
+    @keyframes subtle-float {
+      0%, 100% {
+        transform: translateY(0px) rotate(-1deg);
+      }
+      50% {
+        transform: translateY(-7px) rotate(1deg);
+      }
+    }
+    .animate-card-float {
+      animation: subtle-float 5s ease-in-out infinite;
+    }
+
+    /* Carousel Dark Glassmorphic Card Styles */
+    .carousel-glass-card {
+      width: 325px;
+      min-width: 325px;
+      max-width: 325px;
+      height: 465px;
+      border-radius: 28px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.015) 100%);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
+      transition: opacity 0.4s cubic-bezier(0.2, 0, 0, 1), transform 0.4s cubic-bezier(0.2, 0, 0, 1), filter 0.4s ease, border-color 0.3s;
+      scroll-snap-align: center;
+      cursor: grab;
+      user-select: none;
+    }
+    .carousel-glass-card:active {
+      cursor: grabbing;
+    }
+    .carousel-glass-card:hover {
+      border-color: rgba(255, 255, 255, 0.22);
+    }
+    .carousel-glass-card:hover .card-bottom-glow {
+      opacity: 0.95;
+      transform: scale(1.06);
+    }
+
+    .card-dot-matrix {
+      background-image: radial-gradient(rgba(255, 255, 255, 0.16) 1px, transparent 1px);
+      background-size: 4px 4px;
+    }
+
+    .carousel-mask {
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+      mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    }
+    @media (max-width: 768px) {
+      .carousel-mask {
+        -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+        mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+      }
+    }
+
+    /* Carousel Dot Progress Animation */
+    .carousel-dot {
+      transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .carousel-dot.active {
+      box-shadow: 0 0 12px rgba(76, 215, 246, 0.65), 0 0 20px rgba(139, 92, 246, 0.45);
+    }
+    .carousel-dot .dot-progress-bar {
+      width: 0%;
+      height: 100%;
+      border-radius: 9999px;
+      background: linear-gradient(90deg, #4cd7f6, #adc6ff);
+    }
+    .carousel-dot.active .dot-progress-bar {
+      animation: dotProgressAnim var(--autoplay-duration, 5000ms) linear forwards;
+    }
+    .carousel-dot.paused .dot-progress-bar {
+      animation-play-state: paused;
+    }
+    @keyframes dotProgressAnim {
+      0% { width: 0%; }
+      100% { width: 100%; }
+    }
+  </style>
+<!-- Custom Element Definition for webgl-shader if native or fallback runtime is needed -->
+<script>
+  class WebGLShaderElement extends HTMLElement {
+    connectedCallback() {
+      if (this.querySelector('canvas')) return;
+      const canvas = document.createElement('canvas');
+      canvas.className = 'w-full h-full block';
+      this.appendChild(canvas);
+      const gl = canvas.getContext('webgl');
+      if (!gl) return;
+
+      const vsSource = `
+        attribute vec2 position;
+        varying vec2 v_texCoord;
+        void main() {
+          v_texCoord = position * 0.5 + 0.5;
+          gl_Position = vec4(position, 0.0, 1.0);
+        }
+      `;
+
+      const fsSource = `
+        precision highp float;
+        uniform float u_time;
+        uniform vec2 u_resolution;
+        uniform vec2 u_mouse;
+        varying vec2 v_texCoord;
+
+        void main() {
+            vec2 st = (gl_FragCoord.xy * 2.0 - u_resolution.xy) / min(u_resolution.x, u_resolution.y);
+            vec2 m = (u_mouse.xy / u_resolution.xy) * 2.0 - 1.0;
+            st -= m * 0.12;
+
+            float r = length(st);
+            float a = atan(st.y, st.x);
+
+            float spiral = a * 2.5 - r * 16.0 + u_time * 5.0;
+            float wave1 = sin(spiral);
+            float wave2 = cos(spiral * 0.5 - u_time * 2.5);
+
+            vec3 col = vec3(0.0);
+            col.r = 0.5 + 0.5 * sin(spiral + 0.0);
+            col.g = 0.5 + 0.5 * sin(spiral + 2.094);
+            col.b = 0.5 + 0.5 * sin(spiral + 4.188);
+
+            col = pow(col, vec3(0.75)) * 1.7;
+
+            float core = 0.05 / (r + 0.04);
+            vec3 coreColor = vec3(1.0, 0.95, 1.0) * core * 1.5;
+
+            vec3 finalColor = col * (0.65 + 0.35 * wave1) + coreColor;
+            float scanline = sin(gl_FragCoord.y * 1.5) * 0.08;
+            finalColor -= scanline;
+
+            float vignette = smoothstep(1.15, 0.25, r);
+            finalColor *= vignette;
+
+            gl_FragColor = vec4(finalColor, 1.0);
+        }
+      `;
+
+      function createShader(gl, type, source) {
+        const shader = gl.createShader(type);
+        gl.shaderSource(shader, source);
+        gl.compileShader(shader);
+        return shader;
+      }
+
+      const program = gl.createProgram();
+      gl.attachShader(program, createShader(gl, gl.VERTEX_SHADER, vsSource));
+      gl.attachShader(program, createShader(gl, gl.FRAGMENT_SHADER, fsSource));
+      gl.linkProgram(program);
+      gl.useProgram(program);
+
+      const buffer = gl.createBuffer();
+      gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+      gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([
+        -1, -1,  1, -1, -1,  1,
+        -1,  1,  1, -1,  1,  1
+      ]), gl.STATIC_DRAW);
+
+      const posAttr = gl.getAttribLocation(program, 'position');
+      gl.enableVertexAttribArray(posAttr);
+      gl.vertexAttribPointer(posAttr, 2, gl.FLOAT, false, 0, 0);
+
+      const uTimeLoc = gl.getUniformLocation(program, 'u_time');
+      const uResLoc = gl.getUniformLocation(program, 'u_resolution');
+      const uMouseLoc = gl.getUniformLocation(program, 'u_mouse');
+
+      let mouseX = 0;
+      let mouseY = 0;
+
+      window.addEventListener('mousemove', (e) => {
+        const rect = canvas.getBoundingClientRect();
+        mouseX = e.clientX - rect.left;
+        mouseY = rect.height - (e.clientY - rect.top);
+      });
+
+      const startTime = performance.now();
+      function render() {
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        const displayWidth = Math.floor(canvas.clientWidth * dpr);
+        const displayHeight = Math.floor(canvas.clientHeight * dpr);
+
+        if (canvas.width !== displayWidth || canvas.height !== displayHeight) {
+          canvas.width = displayWidth;
+          canvas.height = displayHeight;
+          gl.viewport(0, 0, canvas.width, canvas.height);
+        }
+
+        const elapsed = (performance.now() - startTime) * 0.001;
+        gl.uniform1f(uTimeLoc, elapsed);
+        gl.uniform2f(uResLoc, canvas.width, canvas.height);
+        gl.uniform2f(uMouseLoc, mouseX * dpr, mouseY * dpr);
+
+        gl.drawArrays(gl.TRIANGLES, 0, 6);
+        requestAnimationFrame(render);
+      }
+      requestAnimationFrame(render);
+    }
+  }
+  if (!customElements.get('webgl-shader')) {
+    customElements.define('webgl-shader', WebGLShaderElement);
+  }
+</script>
+<!-- Atmospheric Background Overlays -->
+
+<div class="fixed inset-0 pointer-events-none z-0 glow-radial-blue"></div>
+<div class="fixed inset-0 pointer-events-none z-0 glow-radial-violet"></div>
+<!-- ========================================================================= -->
+<!-- SHARED COMPONENT: TopNavBar (Exact match from JSON & Brand Tokens)       -->
+<!-- ========================================================================= -->
+<header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="main-header" style="background: linear-gradient(rgba(7, 8, 15, 0.85) 0%, rgba(7, 8, 15, 0.2) 60%, transparent 100%); backdrop-filter: none; border-bottom-width: medium; border-bottom-style: none; border-bottom-color: currentcolor;">
+<style>
+    .nav-clean-link {
+      position: relative;
+      color: rgba(255, 255, 255, 0.8);
+      transition: color 0.25s ease;
+      padding-bottom: 4px;
+    }
+    .nav-clean-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #5AAEF5;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.25s ease;
+    }
+    .nav-clean-link:hover {
+      color: #ffffff;
+    }
+    .nav-clean-link:hover::after {
+      transform: scaleX(1);
+    }
+    .nav-clean-link.active {
+      color: #ffffff;
+    }
+    .nav-clean-link.active::after {
+      transform: scaleX(1);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .nav-clean-link, .nav-clean-link::after, #main-header {
+        transition: none !important;
+      }
+    }
+  </style>
+<div class="max-w-[1360px] mx-auto px-6 md:px-12 h-20 flex justify-between items-center relative z-10">
+<!-- Brand Logo / Wordmark -->
+<a class="flex items-center gap-space-xs group relative py-2 px-1 rounded-xl transition-all duration-300" href="#"><img loading="lazy" decoding="async" width="128" height="128" alt="Brytan Labs Logo" class="w-9 h-9 object-contain rounded-md transition-transform duration-300 group-hover:scale-105" src="assets/img2/logo-mark-128.webp"><span class="font-display text-xl font-bold tracking-tight text-white transition-colors duration-200 ml-1 leading-none">Brytan Labs</span></a>
+<!-- Desktop Flat Navigation Links -->
+<nav class="hidden lg:flex items-center gap-8">
+<a class="nav-clean-link font-title-md text-[15px] font-medium whitespace-nowrap" data-nav-target="services" href="#services">Servicios</a>
+<a class="nav-clean-link font-title-md text-[15px] font-medium whitespace-nowrap" data-nav-target="benefits" href="#benefits">Beneficios</a>
+<a class="nav-clean-link font-title-md text-[15px] font-medium whitespace-nowrap" data-nav-target="case-studies" href="#case-studies">Casos de Estudio</a>
+<a class="nav-clean-link font-title-md text-[15px] font-medium whitespace-nowrap" data-nav-target="proceso" href="#proceso">Nosotros</a>
+<a class="inline-flex items-center justify-center px-5 py-2 rounded-xl text-sm font-medium text-white/90 hover:text-white bg-white/10 hover:bg-white/[0.15] border border-white/20 hover:border-cyan-400/40 backdrop-blur-md transition-all duration-200 active:scale-95 shadow-sm whitespace-nowrap cursor-pointer" href="#contact">Contáctanos</a>
+</nav>
+<!-- Minimalist Mobile Menu Button (2 lines) -->
+<button aria-label="Abrir menú" class="lg:hidden flex flex-col justify-center items-center gap-1.5 w-10 h-10 p-2 text-white/80 hover:text-white transition-colors cursor-pointer focus:outline-none" id="mobile-menu-toggle" type="button">
+<span class="w-6 h-[1.5px] bg-white transition-all"></span>
+<span class="w-4 h-[1.5px] bg-white transition-all self-end"></span>
+</button>
+</div>
+<!-- Fullscreen Mobile Navigation Overlay -->
+<div class="fixed inset-0 bg-[#07080f]/95 z-50 flex flex-col justify-center items-center transition-all duration-300 opacity-0 pointer-events-none" id="mobile-menu-overlay">
+<button aria-label="Cerrar menú" class="absolute top-6 right-6 p-3 text-white/80 hover:text-white transition-colors cursor-pointer focus:outline-none" id="mobile-menu-close" type="button">
+<svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+<nav class="flex flex-col items-center gap-8 text-center">
+<a class="mobile-nav-item font-display text-2xl font-medium text-white/80 hover:text-white transition-colors" href="#services">Servicios</a>
+<a class="mobile-nav-item font-display text-2xl font-medium text-white/80 hover:text-white transition-colors" href="#benefits">Beneficios</a>
+<a class="mobile-nav-item font-display text-2xl font-medium text-white/80 hover:text-white transition-colors" href="#case-studies">Casos de Estudio</a>
+<a class="mobile-nav-item font-display text-2xl font-medium text-white/80 hover:text-white transition-colors" href="#proceso">Nosotros</a>
+<a class="mobile-nav-item font-display text-2xl font-medium text-[#5AAEF5] hover:text-white transition-colors" href="#contact">Contáctanos</a>
+</nav>
+</div>
+<script>
+    (function() {
+      const header = document.getElementById('main-header');
+      const transparentBg = 'linear-gradient(180deg, rgba(7, 8, 15, 0.85) 0%, rgba(7, 8, 15, 0.2) 60%, transparent 100%)';
+      
+      function handleScroll() {
+        if (!header) return;
+        if (window.scrollY > 40) {
+          header.style.background = 'rgba(7, 8, 15, 0.85)';
+          header.style.backdropFilter = 'blur(12px)';
+          header.style.webkitBackdropFilter = 'blur(12px)';
+          header.style.borderBottom = '1px solid rgba(255, 255, 255, 0.08)';
+        } else {
+          header.style.background = transparentBg;
+          header.style.backdropFilter = 'none';
+          header.style.webkitBackdropFilter = 'none';
+          header.style.borderBottom = 'none';
+        }
+      }
+      window.addEventListener('scroll', handleScroll, { passive: true });
+      handleScroll();
+
+      // Scrollspy active state for sections
+      const trackedNavLinks = document.querySelectorAll('.nav-clean-link[data-nav-target]');
+      const sectionIds = ['services', 'benefits', 'case-studies', 'proceso'];
+      
+      function updateScrollspy() {
+        const scrollPos = window.scrollY + 140;
+        let currentSectionId = '';
+        for (let i = 0; i < sectionIds.length; i++) {
+          const sec = document.getElementById(sectionIds[i]);
+          if (sec) {
+            const top = sec.offsetTop;
+            const height = sec.offsetHeight;
+            if (scrollPos >= top && scrollPos < top + height) {
+              currentSectionId = sectionIds[i];
+              break;
+            }
+          }
+        }
+        trackedNavLinks.forEach(link => {
+          if (link.getAttribute('data-nav-target') === currentSectionId) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        });
+      }
+      window.addEventListener('scroll', updateScrollspy, { passive: true });
+      updateScrollspy();
+
+      // Mobile menu toggle & keyboard close
+      const mobileToggle = document.getElementById('mobile-menu-toggle');
+      const mobileClose = document.getElementById('mobile-menu-close');
+      const mobileOverlay = document.getElementById('mobile-menu-overlay');
+      const mobileItems = document.querySelectorAll('.mobile-nav-item');
+
+      function openMenu() {
+        if (!mobileOverlay) return;
+        mobileOverlay.classList.remove('opacity-0', 'pointer-events-none');
+        mobileOverlay.classList.add('opacity-100', 'pointer-events-auto');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeMenu() {
+        if (!mobileOverlay) return;
+        mobileOverlay.classList.remove('opacity-100', 'pointer-events-auto');
+        mobileOverlay.classList.add('opacity-0', 'pointer-events-none');
+        document.body.style.overflow = '';
+      }
+
+      if (mobileToggle) mobileToggle.addEventListener('click', openMenu);
+      if (mobileClose) mobileClose.addEventListener('click', closeMenu);
+      mobileItems.forEach(item => item.addEventListener('click', closeMenu));
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeMenu();
+      });
+    })();
+  </script>
+</header>
+<main class="relative z-10 flex flex-col">
+<!-- ========================================================================= -->
+<!-- HERO SECTION: Interactive Tilt & WebGL Live Shader CRT Monitor             -->
+<!-- ========================================================================= -->
+<section class="relative pt-20 md:pt-28 overflow-hidden bg-[#0a0e18] pb-12" id="hero-section"><div class="absolute inset-0 pointer-events-none select-none overflow-hidden z-0"><img alt="Fondo abstracto de cintas luminosas" class="absolute right-0 bottom-0 w-auto h-full max-h-full max-w-none md:max-w-full object-contain object-right select-none pointer-events-none" src="assets/img/bg-dark-2560.webp" srcset="assets/img/bg-dark-1280.webp 1280w, assets/img/bg-dark-2560.webp 2560w" sizes="100vw" fetchpriority="high" decoding="async" style="image-rendering: auto;"><div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to right, rgba(10, 14, 24, 0.95) 0%, rgba(10, 14, 24, 0.82) 35%, rgba(10, 14, 24, 0.35) 65%, transparent 100%);"></div><div class="absolute top-0 inset-x-0 h-28 bg-gradient-to-b from-[#0a0e18] via-[#0a0e18]/80 to-transparent pointer-events-none"></div><div class="absolute bottom-0 inset-x-0 h-24 bg-gradient-to-t from-[#0a0e18] to-transparent pointer-events-none"></div></div><style class="">
+  @keyframes heroGlowPulse {
+    0%, 100% {
+      opacity: 0.75;
+      transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+      opacity: 0.95;
+      transform: translate(-50%, -50%) scale(1.08) translateY(-10px);
+    }
+  }
+  @keyframes heroBeamLeft {
+    0%, 100% {
+      transform: translateY(-50%) scale(1) rotate(0deg);
+      opacity: 0.55;
+    }
+    50% {
+      transform: translateY(-53%) scale(1.05) rotate(1.5deg);
+      opacity: 0.75;
+    }
+  }
+  @keyframes heroBeamRight {
+    0%, 100% {
+      transform: translateY(-50%) scale(1) rotate(0deg);
+      opacity: 0.55;
+    }
+    50% {
+      transform: translateY(-47%) scale(1.05) rotate(-1.5deg);
+      opacity: 0.75;
+    }
+  }
+  @keyframes ambientAuraFloat {
+    0%, 100% {
+      transform: scale(1) translateY(0);
+      opacity: 0.6;
+    }
+    50% {
+      transform: scale(1.12) translateY(-16px);
+      opacity: 0.85;
+    }
+  }
+  .animate-hero-glow {
+    animation: heroGlowPulse 8s ease-in-out infinite;
+  }
+  .animate-beam-left {
+    animation: heroBeamLeft 7s ease-in-out infinite;
+  }
+  .animate-beam-right {
+    animation: heroBeamRight 7s ease-in-out infinite 1s;
+  }
+  .animate-aura-float {
+    animation: ambientAuraFloat 10s ease-in-out infinite;
+  }
+</style>
+<!-- Ambient background glow matched with La Ventaja section -->
+<!-- Left Iconic Textured Prism Light Beam from reference IMAGE_2 -->
+<!-- Right Iconic Textured Prism Light Beam from reference IMAGE_2 -->
+<div class="w-full px-margin-mobile md:px-margin max-w-[1360px] mx-auto flex flex-col items-center text-center relative z-10">
+<!-- Brand Badge / Pill matching Better Stack top emblem -->
+<!-- Main Headline verbatim from user request -->
+<h1 class="font-display text-4xl sm:text-5xl md:text-6xl lg:text-[68px] text-white font-bold tracking-tight max-w-4xl mx-auto uppercase leading-[1.08]">
+      Software a medida con inteligencia artificial integrada
+    </h1>
+<!-- Subheadline verbatim from user request -->
+<p class="mt-6 max-w-2xl mx-auto font-body-lg text-base md:text-lg text-white/70 font-normal leading-relaxed">
+      Desarrollamos aplicaciones, automatizaciones y agentes de IA que trabajan para tu negocio.
+    </p>
+<!-- Better Stack Style Input Box + Action Button -->
+<div class="mt-10 w-full max-w-xl mx-auto flex flex-col items-center"><div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto"><a class="w-full sm:w-56 h-12 flex items-center justify-center text-center bg-gradient-to-r from-[#3b82f6] to-[#4d8eff] hover:from-[#2563eb] hover:to-[#3b82f6] text-white font-semibold shadow-[0_0_20px_rgba(59,130,246,0.35)] hover:shadow-[0_0_25px_rgba(59,130,246,0.5)] rounded-xl px-6 transition-all duration-200 active:scale-95 text-sm md:text-base cursor-pointer" href="#contact">Cotizar mi proyecto</a><a class="w-full sm:w-56 h-12 flex items-center justify-center text-center bg-white/10 hover:bg-white/[0.15] text-white/90 hover:text-white font-medium border border-white/20 hover:border-white/40 rounded-xl px-6 transition-all duration-200 active:scale-95 text-sm md:text-base backdrop-blur-md cursor-pointer" href="#services">Ver servicios</a></div><p class="mt-4 font-body-sm text-xs text-[#8c909f] text-center">Diagnóstico inicial sin costo — Habla directamente con el desarrollador</p></div>
+<!-- Monochrome Client & Partner Logos Strip from Reference IMAGE_2 -->
+<div class="w-full mt-4">
+<div class="flex flex-wrap items-center justify-center gap-x-4 sm:gap-x-6 gap-y-2.5 opacity-60 hover:opacity-90 transition-opacity duration-300 select-none pt-0 font-label-code text-xs sm:text-sm tracking-widest text-white/70 uppercase"><span class="hover:text-white transition-colors duration-200">APLICACIONES WEB</span><span class="text-white/20 select-none"><br></span><span class="hover:text-white transition-colors duration-200">AGENTES IA 24/7</span><span class="hover:text-white transition-colors duration-200">FLUJOS AUTOMATIZADOS</span><span class="hover:text-white transition-colors duration-200">SOFTWARE A MEDIDA</span><span class="hover:text-white transition-colors duration-200">REDISEÑO WEB</span></div>
+</div>
+</div>
+</section>
+<!-- Interactive Mouse Tracking Script for Hero Tilt Parallax -->
+<script>
+  (function() {
+    const heroSection = document.getElementById('hero-section');
+    const monitorContainer = document.getElementById('hero-monitor-container');
+    const dynamicGlow = document.getElementById('monitor-dynamic-glow');
+
+    if (!heroSection || !monitorContainer) return;
+
+    let targetRotateX = 0;
+    let targetRotateY = 0;
+    let targetTranslateX = 0;
+    let targetTranslateY = 0;
+    let currentRotateX = 0;
+    let currentRotateY = 0;
+    let currentTranslateX = 0;
+    let currentTranslateY = 0;
+    let isHovering = false;
+
+    heroSection.addEventListener('mousemove', (e) => {
+      isHovering = true;
+      const rect = heroSection.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+
+      const normX = (e.clientX - centerX) / (rect.width / 2);
+      const normY = (e.clientY - centerY) / (rect.height / 2);
+
+      targetRotateX = -normY * 11;
+      targetRotateY = normX * 14;
+      targetTranslateX = normX * 16;
+      targetTranslateY = normY * 12;
+
+      if (dynamicGlow) {
+        const glowShiftX = normX * 35;
+        const glowShiftY = normY * 30;
+        dynamicGlow.style.transform = `translate(${glowShiftX}px, ${glowShiftY}px) scale(${1 + Math.abs(normX * 0.1)})`;
+        dynamicGlow.style.opacity = '0.9';
+      }
+    });
+
+    heroSection.addEventListener('mouseleave', () => {
+      isHovering = false;
+      targetRotateX = 0;
+      targetRotateY = 0;
+      targetTranslateX = 0;
+      targetTranslateY = 0;
+
+      if (dynamicGlow) {
+        dynamicGlow.style.transform = `translate(0px, 0px) scale(1)`;
+        dynamicGlow.style.opacity = '0.65';
+      }
+    });
+
+    function updateTilt() {
+      const ease = isHovering ? 0.08 : 0.05;
+      currentRotateX += (targetRotateX - currentRotateX) * ease;
+      currentRotateY += (targetRotateY - currentRotateY) * ease;
+      currentTranslateX += (targetTranslateX - currentTranslateX) * ease;
+      currentTranslateY += (targetTranslateY - currentTranslateY) * ease;
+
+      monitorContainer.style.transform = `perspective(1000px) rotateX(${currentRotateX.toFixed(2)}deg) rotateY(${currentRotateY.toFixed(2)}deg) translate3d(${currentTranslateX.toFixed(2)}px, ${currentTranslateY.toFixed(2)}px, 0)`;
+
+      requestAnimationFrame(updateTilt);
+    }
+    requestAnimationFrame(updateTilt);
+  })();
+</script>
+<!-- ========================================================================= -->
+<!-- CAPABILITIES CAROUSEL SECTION: Dark Glassmorphic Interactive Slider       -->
+<!-- ========================================================================= -->
+<section class="w-full scroll-mt-24 relative overflow-hidden bg-[#0a0e18] pb-16 pt-4" id="services">
+<div class="w-full px-margin-mobile md:px-margin max-w-[1360px] mx-auto">
+<!-- Section Header with Next/Prev Controls -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4"><div>
+<div class="flex items-center gap-2 mb-2 font-label-caps text-label-caps text-tertiary tracking-widest uppercase">
+
+
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-white tracking-tight">Ingeniería de Ciclo Completo &amp; Flujos Modulares</h2>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-6">
+<p class="font-body-lg text-body-lg text-[#8b8b99] max-w-md hidden sm:block">Desarrollamos, automatizamos e integramos IA en tu negocio, de la idea a producción, con soluciones que crecen contigo.</p>
+<div class="flex items-center gap-2">
+<button aria-label="Tarjeta anterior" class="w-11 h-11 rounded-full bg-white/[0.05] hover:bg-white/[0.12] border border-white/10 hover:border-cyan-400/40 text-white/80 hover:text-white flex items-center justify-center transition-all duration-200 active:scale-95 shadow-lg cursor-pointer" id="services-prev-btn">
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</button>
+<button aria-label="Siguiente tarjeta" class="w-11 h-11 rounded-full bg-white/[0.05] hover:bg-white/[0.12] border border-white/10 hover:border-cyan-400/40 text-white/80 hover:text-white flex items-center justify-center transition-all duration-200 active:scale-95 shadow-lg cursor-pointer" id="services-next-btn">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</div>
+</div></div>
+<!-- Horizontal Card Carousel Container with Scroll Snap, Drag/Swipe & Opacity Fade Transitions -->
+<div class="relative w-full group/carousel" id="services-carousel-wrapper">
+<div class="carousel-mask overflow-x-auto no-scrollbar pb-6 pt-2 px-4 sm:px-12 flex gap-[18px] cursor-grab active:cursor-grabbing select-none" id="services-carousel-track" style="scroll-snap-type: x mandatory; scroll-behavior: smooth;"><!-- Tarjeta 1 (Automatización) -->
+<div class="carousel-glass-card p-6 flex flex-col justify-between relative overflow-hidden flex-shrink-0 group" data-card-index="0" style="opacity: 0.28; transform: scale(0.92); filter: blur(2.4px);">
+<div class="relative z-10">
+<div class="w-[46px] h-[46px] rounded-xl border border-white/10 bg-white/[0.04] flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[22px]">auto_awesome</span>
+</div>
+<div class="mt-8 text-[20px] leading-[1.35] tracking-tight font-normal">
+<strong class="text-white font-semibold">Pausa o reactiva tus automatizaciones con un solo toque:</strong>
+<span class="text-[#8b8b99] block mt-1.5">tú decides cuándo trabajan, y ellas se encargan del resto.</span>
+</div>
+</div>
+<div aria-label="Alternar estado de automatización" class="relative w-full mt-auto flex items-center justify-center overflow-hidden rounded-xl pt-2 cursor-pointer group/toggle" id="automation-switch-visual" onclick="this.classList.toggle('is-paused')" role="button" tabindex="0"><div class="relative w-full h-[190px] overflow-hidden rounded-xl pointer-events-none select-none" style="mask-image: radial-gradient(ellipse 95% 90% at 50% 60%, black 72%, transparent 100%); -webkit-mask-image: radial-gradient(ellipse 95% 90% at 50% 60%, black 72%, transparent 100%);"><img loading="lazy" decoding="async" width="512" height="382" alt="Automatización activa Brytan Labs" class="absolute inset-0 w-full h-full object-cover object-bottom transition-opacity duration-300 ease-out group-hover/toggle:opacity-0 group-focus/toggle:opacity-0 [.is-paused_&amp;]:opacity-0 motion-reduce:transition-none" src="assets/img2/card-automation.webp"><img loading="lazy" decoding="async" width="512" height="382" alt="Automatización pausada Brytan Labs" class="absolute inset-0 w-full h-full object-cover object-bottom opacity-0 transition-opacity duration-300 ease-out group-hover/toggle:opacity-100 group-focus/toggle:opacity-100 [.is-paused_&amp;]:opacity-100 motion-reduce:transition-none" src="assets/img2/card-automation-paused.webp"></div></div>
+<div class="card-bottom-glow absolute bottom-0 left-0 right-0 h-44 pointer-events-none transition-all duration-300 opacity-70" style="background: radial-gradient(ellipse at bottom, rgba(139,92,246,0.55), transparent 70%);"></div>
+<div class="card-dot-matrix absolute bottom-0 left-0 right-0 h-32 pointer-events-none opacity-40"></div>
+</div>
+<!-- Tarjeta 2 (Web y aplicaciones) -->
+<div class="carousel-glass-card p-6 flex flex-col justify-between relative overflow-hidden flex-shrink-0 group" data-card-index="1" style="opacity: 0.28; transform: scale(0.92); filter: blur(2.4px);">
+<div class="relative z-10">
+<div class="w-[46px] h-[46px] rounded-xl border border-white/10 bg-white/[0.04] flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[22px]">terminal</span>
+</div>
+<div class="mt-8 text-[20px] leading-[1.35] tracking-tight font-normal">
+<strong class="text-white font-semibold">Sitios y apps a medida</strong>
+<span class="text-[#8b8b99] block mt-1.5">desde cero hasta producción: rápidos, responsivos y listos para escalar con tu negocio.</span>
+</div>
+</div>
+<div class="relative w-full mt-auto flex items-center justify-center overflow-hidden rounded-xl pt-2">
+<img loading="lazy" decoding="async" width="512" height="382" alt="Sitios y apps a medida UI preview" class="w-full h-auto object-contain transition-transform duration-300 ease-out group-hover:scale-[1.03] group-hover:-translate-y-1" src="assets/img2/card-web-apps.webp" style="mask-image: radial-gradient(ellipse 95% 90% at 50% 50%, black 75%, transparent 100%); -webkit-mask-image: radial-gradient(ellipse 95% 90% at 50% 50%, black 75%, transparent 100%);">
+</div>
+<div class="card-bottom-glow absolute bottom-0 left-0 right-0 h-44 pointer-events-none transition-all duration-300 opacity-70" style="background: radial-gradient(ellipse at bottom, rgba(56,189,248,0.5), transparent 70%);"></div>
+<div class="card-dot-matrix absolute bottom-0 left-0 right-0 h-32 pointer-events-none opacity-40"></div>
+</div>
+<!-- Tarjeta 3 (Agentes de IA) -->
+<div class="carousel-glass-card p-6 flex flex-col justify-between relative overflow-hidden flex-shrink-0 group" data-card-index="2" style="opacity: 0.301; transform: scale(0.922); filter: blur(0.7px);">
+<div class="relative z-10">
+<div class="w-[46px] h-[46px] rounded-xl border border-white/10 bg-white/[0.04] flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[22px]">smart_toy</span>
+</div>
+<div class="mt-8 text-[20px] leading-[1.35] tracking-tight font-normal">
+<strong class="text-white font-semibold">Agentes de IA que atienden, analizan y ejecutan</strong>
+<span class="text-[#8b8b99] block mt-1.5">tareas por tu negocio, a cualquier hora.</span>
+</div>
+</div>
+<div class="relative w-full mt-auto flex items-center justify-center overflow-hidden rounded-xl pt-2"><img loading="lazy" decoding="async" width="512" height="382" alt="Agente Brytan UI" class="w-full h-auto object-contain transition-transform duration-300 ease-out group-hover:scale-[1.03] group-hover:-translate-y-1" src="assets/img2/card-agents.webp" style="mask-image: radial-gradient(ellipse 95% 90% at 50% 50%, black 75%, transparent 100%); -webkit-mask-image: radial-gradient(ellipse 95% 90% at 50% 50%, black 75%, transparent 100%);"></div>
+<div class="card-bottom-glow absolute bottom-0 left-0 right-0 h-44 pointer-events-none transition-all duration-300 opacity-70" style="background: radial-gradient(ellipse at bottom, rgba(139,92,246,0.55), transparent 70%);"></div>
+<div class="card-dot-matrix absolute bottom-0 left-0 right-0 h-32 pointer-events-none opacity-40"></div>
+</div>
+<!-- Tarjeta 4 (Integración con tus datos) -->
+<div class="carousel-glass-card p-6 flex flex-col justify-between relative overflow-hidden flex-shrink-0 group" data-card-index="3" style="opacity: 0.676; transform: scale(0.964); filter: blur(0px);">
+<div class="relative z-10">
+<div class="w-[46px] h-[46px] rounded-xl border border-white/10 bg-white/[0.04] flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[22px]">database</span>
+</div>
+<div class="mt-8 text-[20px] leading-[1.35] tracking-tight font-normal">
+<strong class="text-white font-semibold">Tu IA conectada a tus propios sistemas:</strong>
+<span class="text-[#8b8b99] block mt-1.5">bases de datos, APIs y herramientas, para respuestas con información real de tu negocio.</span>
+</div>
+</div>
+<div class="relative w-full mt-auto flex items-center justify-center overflow-hidden rounded-xl pt-2"><img loading="lazy" decoding="async" width="512" height="382" alt="Conectores y Hub de Datos IA" class="w-full h-auto object-contain transition-transform duration-300 ease-out group-hover:scale-[1.03] group-hover:-translate-y-1" src="assets/img2/card-data-hub.webp" style="mask-image: radial-gradient(ellipse 95% 90% at 50% 50%, black 75%, transparent 100%); -webkit-mask-image: radial-gradient(ellipse 95% 90% at 50% 50%, black 75%, transparent 100%);"></div>
+<div class="card-bottom-glow absolute bottom-0 left-0 right-0 h-44 pointer-events-none transition-all duration-300 opacity-70" style="background: radial-gradient(ellipse at bottom, rgba(56,189,248,0.5), transparent 70%);"></div>
+<div class="card-dot-matrix absolute bottom-0 left-0 right-0 h-32 pointer-events-none opacity-40"></div>
+</div>
+<!-- Tarjeta 5 (Memoria y personalización) -->
+<div class="carousel-glass-card p-6 flex flex-col justify-between relative overflow-hidden flex-shrink-0 group" data-card-index="4" style="opacity: 0.95; transform: scale(0.994); filter: blur(0px);">
+<div class="relative z-10">
+<div class="w-[46px] h-[46px] rounded-xl border border-white/10 bg-white/[0.04] flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[22px]">psychology</span>
+</div>
+<div class="mt-8 text-[20px] leading-[1.35] tracking-tight font-normal">
+<strong class="text-white font-semibold">Asistentes que recuerdan a cada cliente</strong>
+<span class="text-[#8b8b99] block mt-1.5">y personalizan cada conversación sin repetir preguntas.</span>
+</div>
+</div>
+<div class="relative w-full mt-auto flex items-center justify-center overflow-hidden rounded-xl pt-2"><img loading="lazy" decoding="async" width="512" height="382" alt="Asistentes con memoria de cliente" class="w-full h-auto object-contain transition-all duration-300 group-hover:-translate-y-1 group-hover:scale-[1.03] select-none pointer-events-none" src="assets/img2/card-memory.webp" style="aspect-ratio: 4/3; mask-image: radial-gradient(ellipse 95% 90% at 50% 50%, black 75%, transparent 100%); -webkit-mask-image: radial-gradient(ellipse 95% 90% at 50% 50%, black 75%, transparent 100%);"></div>
+<div class="card-bottom-glow absolute bottom-0 left-0 right-0 h-44 pointer-events-none transition-all duration-300 opacity-70" style="background: radial-gradient(ellipse at bottom, rgba(139,92,246,0.55), transparent 70%);"></div>
+<div class="card-dot-matrix absolute bottom-0 left-0 right-0 h-32 pointer-events-none opacity-40"></div>
+</div>
+<!-- Tarjeta 6 (Flujos multiagente) -->
+<div class="carousel-glass-card p-6 flex flex-col justify-between relative overflow-hidden flex-shrink-0 group" data-card-index="5" style="opacity: 0.575; transform: scale(0.953); filter: blur(0px);">
+<div class="relative z-10">
+<div class="w-[46px] h-[46px] rounded-xl border border-white/10 bg-white/[0.04] flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[22px]">hub</span>
+</div>
+<div class="mt-8 text-[20px] leading-[1.35] tracking-tight font-normal">
+<strong class="text-white font-semibold">Cada consulta llega al especialista correcto:</strong>
+<span class="text-[#8b8b99] block mt-1.5">agentes que clasifican, derivan y colaboran entre sí.</span>
+</div>
+</div>
+<div class="relative w-full mt-auto flex items-center justify-center overflow-hidden rounded-xl pt-2"><img loading="lazy" decoding="async" width="512" height="382" alt="Enrutamiento de consultas multiagente a especialistas" class="w-full h-auto object-contain transition-all duration-300 group-hover:-translate-y-1 group-hover:scale-[1.03] select-none pointer-events-none" src="assets/img2/card-routing.webp" style="aspect-ratio: 4/3; mask-image: radial-gradient(ellipse 95% 90% at 50% 50%, black 75%, transparent 100%); -webkit-mask-image: radial-gradient(ellipse 95% 90% at 50% 50%, black 75%, transparent 100%);"></div>
+<div class="card-bottom-glow absolute bottom-0 left-0 right-0 h-44 pointer-events-none transition-all duration-300 opacity-70" style="background: radial-gradient(ellipse at bottom, rgba(56,189,248,0.5), transparent 70%);"></div>
+<div class="card-dot-matrix absolute bottom-0 left-0 right-0 h-32 pointer-events-none opacity-40"></div>
+</div></div>
+<!-- Animated Pagination Indicators with Glow & Progress Fill -->
+<div class="flex items-center justify-center gap-3 mt-6 select-none" id="services-pagination"><div class="carousel-dot relative w-12 h-1.5 rounded-full bg-white/20 overflow-hidden" data-dot-index="0" style="width: 16px; background-color: rgba(255, 255, 255, 0.2);" title="Slide 1"><div class="dot-progress-bar"></div></div>
+<div class="carousel-dot relative w-4 h-1.5 rounded-full bg-white/20 overflow-hidden" data-dot-index="1" style="width: 16px; background-color: rgba(255, 255, 255, 0.2);" title="Slide 2"><div class="dot-progress-bar"></div></div>
+<div class="carousel-dot relative w-4 h-1.5 rounded-full bg-white/20 overflow-hidden active" data-dot-index="2" style="width: 48px; background-color: rgba(255, 255, 255, 0.3);" title="Slide 3"><div class="dot-progress-bar"></div></div>
+<div class="carousel-dot relative w-4 h-1.5 rounded-full bg-white/20 overflow-hidden" data-dot-index="3" style="width: 16px; background-color: rgba(255, 255, 255, 0.2);" title="Slide 4"><div class="dot-progress-bar"></div></div>
+<div class="carousel-dot relative w-4 h-1.5 rounded-full bg-white/20 overflow-hidden" data-dot-index="4" style="width: 16px; background-color: rgba(255, 255, 255, 0.2);" title="Slide 5"><div class="dot-progress-bar"></div></div>
+<div class="carousel-dot relative w-4 h-1.5 rounded-full bg-white/20 overflow-hidden" data-dot-index="5" style="width: 16px; background-color: rgba(255, 255, 255, 0.2);" title="Slide 6"><div class="dot-progress-bar"></div></div></div>
+</div>
+</div>
+<script id="services-interactive-enhancement">
+  (function() {
+    // Interacción hover/focus/touch para pausar o reactivar en Tarjeta 1
+    const preview = document.getElementById('workflow-card-preview');
+    const statusText = document.getElementById('workflow-status-text');
+    const statusDot = document.getElementById('workflow-status-dot');
+
+    if (preview && statusText && statusDot) {
+      const setPaused = () => {
+        preview.style.background = 'linear-gradient(135deg, #475569 0%, #334155 52%, #1e293b 100%)';
+        preview.style.boxShadow = '0 0 25px rgba(100, 116, 139, 0.35), inset 0 0 15px rgba(255,255,255,0.15)';
+        statusText.textContent = 'PAUSADO';
+        statusText.style.color = '#94a3b8';
+        statusDot.className = 'w-2.5 h-2.5 rounded-full bg-slate-400 transition-all duration-300';
+      };
+
+      const setActive = () => {
+        preview.style.background = 'linear-gradient(135deg, #b9a4f5 0%, #7c5cf0 52%, #a78bfa 100%)';
+        preview.style.boxShadow = '0 0 35px rgba(167,139,250,0.65), 0 0 70px rgba(124,92,240,0.38), inset 0 0 15px rgba(255,255,255,0.35)';
+        statusText.textContent = 'ACTIVO';
+        statusText.style.color = '#ffffff';
+        statusDot.className = 'w-2.5 h-2.5 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399] transition-all duration-300';
+      };
+
+      preview.addEventListener('mouseenter', setPaused);
+      preview.addEventListener('mouseleave', setActive);
+      preview.addEventListener('touchstart', (e) => {
+        if (statusText.textContent === 'ACTIVO') { setPaused(); } else { setActive(); }
+      }, { passive: true });
+    }
+
+  })();
+</script></section>
+<!-- Interactive Carousel Script: Navigation, Swipe/Drag, Autoplay & Dynamic Edge Opacity -->
+<script>
+  (function initServicesCarousel() {
+    const track = document.getElementById('services-carousel-track');
+    const wrapper = document.getElementById('services-carousel-wrapper');
+    const prevBtn = document.getElementById('services-prev-btn');
+    const nextBtn = document.getElementById('services-next-btn');
+    const dots = document.querySelectorAll('#services-pagination .carousel-dot');
+    if (!track) return;
+
+    const cards = Array.from(track.querySelectorAll('.carousel-glass-card'));
+    const totalCards = cards.length;
+    let currentIndex = 0;
+    const AUTOPLAY_DELAY = 4500;
+    let autoplayTimer = null;
+    let isPaused = false;
+
+    // Set duration in CSS property for the progress animation
+    document.documentElement.style.setProperty('--autoplay-duration', `${AUTOPLAY_DELAY}ms`);
+
+    // 1. Calculate dynamic fade and scale based on horizontal center proximity
+    function updateCardOpacities() {
+      const trackRect = track.getBoundingClientRect();
+      const trackCenter = trackRect.left + trackRect.width / 2;
+      const visibleThreshold = trackRect.width * 0.55;
+
+      let closestIndex = 0;
+      let minDistance = Infinity;
+
+      cards.forEach((card, index) => {
+        const cardRect = card.getBoundingClientRect();
+        const cardCenter = cardRect.left + cardRect.width / 2;
+        const distFromCenter = Math.abs(trackCenter - cardCenter);
+
+        if (distFromCenter < minDistance) {
+          minDistance = distFromCenter;
+          closestIndex = index;
+        }
+
+        // Calculate opacity and scale: 1.0 when centered, fading down to 0.28 towards edges/out of view
+        const normalizedDist = Math.min(distFromCenter / visibleThreshold, 1.25);
+        const opacity = Math.max(0.28, (1 - normalizedDist * 0.72)).toFixed(3);
+        const scale = Math.max(0.92, (1 - normalizedDist * 0.08)).toFixed(3);
+        const blur = (normalizedDist > 0.85) ? `${((normalizedDist - 0.85) * 6).toFixed(1)}px` : '0px';
+
+        card.style.opacity = opacity;
+        card.style.transform = `scale(${scale})`;
+        card.style.filter = `blur(${blur})`;
+      });
+
+      if (closestIndex !== currentIndex) {
+        currentIndex = closestIndex;
+        updatePagination(currentIndex);
+      }
+    }
+
+    // 2. Pagination dots indicator state
+    function updatePagination(idx) {
+      dots.forEach((dot, i) => {
+        if (i === idx) {
+          dot.classList.add('active');
+          dot.style.width = '48px';
+          dot.style.backgroundColor = 'rgba(255, 255, 255, 0.3)';
+          const bar = dot.querySelector('.dot-progress-bar');
+          if (bar) {
+            bar.style.animation = 'none';
+            // Force reflow
+            void bar.offsetWidth;
+            bar.style.animation = '';
+          }
+        } else {
+          dot.classList.remove('active');
+          dot.style.width = '16px';
+          dot.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+        }
+      });
+    }
+
+    // 3. Smooth scroll to specific card
+    function scrollToIndex(index, smooth = true) {
+      if (index < 0) index = 0;
+      if (index >= totalCards) index = totalCards - 1;
+      const targetCard = cards[index];
+      if (!targetCard) return;
+
+      const trackRect = track.getBoundingClientRect();
+      const cardRect = targetCard.getBoundingClientRect();
+      const currentScroll = track.scrollLeft;
+      const targetScroll = currentScroll + (cardRect.left - trackRect.left) - (trackRect.width / 2 - cardRect.width / 2);
+
+      track.scrollTo({
+        left: targetScroll,
+        behavior: smooth ? 'smooth' : 'auto'
+      });
+      currentIndex = index;
+      updatePagination(currentIndex);
+    }
+
+    // 4. Autoplay with pause on hover/interaction
+    function startAutoplay() {
+      stopAutoplay();
+      dots.forEach(d => d.classList.remove('paused'));
+      autoplayTimer = setInterval(() => {
+        if (!isPaused) {
+          const nextIndex = (currentIndex + 1) % totalCards;
+          scrollToIndex(nextIndex);
+        }
+      }, AUTOPLAY_DELAY);
+    }
+
+    function stopAutoplay() {
+      if (autoplayTimer) {
+        clearInterval(autoplayTimer);
+        autoplayTimer = null;
+      }
+    }
+
+    function pauseAutoplay() {
+      isPaused = true;
+      dots.forEach(d => d.classList.add('paused'));
+    }
+
+    function resumeAutoplay() {
+      isPaused = false;
+      dots.forEach(d => d.classList.remove('paused'));
+    }
+
+    // 5. Button controls
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        const target = Math.max(0, currentIndex - 1);
+        scrollToIndex(target);
+        startAutoplay();
+      });
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        const target = Math.min(totalCards - 1, currentIndex + 1);
+        scrollToIndex(target);
+        startAutoplay();
+      });
+    }
+
+    // 6. Dot click navigation
+    dots.forEach((dot) => {
+      dot.addEventListener('click', () => {
+        const idx = parseInt(dot.getAttribute('data-dot-index') || '0', 10);
+        scrollToIndex(idx);
+        startAutoplay();
+      });
+    });
+
+    // 7. Drag & Swipe Functionality
+    let isDown = false;
+    let startX = 0;
+    let scrollStart = 0;
+    let hasMoved = false;
+
+    track.addEventListener('mousedown', (e) => {
+      isDown = true;
+      hasMoved = false;
+      startX = e.pageX - track.offsetLeft;
+      scrollStart = track.scrollLeft;
+      track.style.scrollBehavior = 'auto';
+      track.style.scrollSnapType = 'none';
+      pauseAutoplay();
+    });
+
+    window.addEventListener('mouseup', () => {
+      if (!isDown) return;
+      isDown = false;
+      track.style.scrollBehavior = 'smooth';
+      track.style.scrollSnapType = 'x mandatory';
+      updateCardOpacities();
+      setTimeout(resumeAutoplay, 800);
+    });
+
+    track.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - track.offsetLeft;
+      const walk = (x - startX) * 1.35;
+      if (Math.abs(walk) > 6) hasMoved = true;
+      track.scrollLeft = scrollStart - walk;
+      updateCardOpacities();
+    });
+
+    // Touch support for mobile swipe
+    let touchStartX = 0;
+    track.addEventListener('touchstart', (e) => {
+      touchStartX = e.touches[0].clientX;
+      pauseAutoplay();
+    }, { passive: true });
+
+    track.addEventListener('touchend', () => {
+      setTimeout(resumeAutoplay, 1200);
+    }, { passive: true });
+
+    // Prevent click on drag
+    cards.forEach((card, index) => {
+      card.addEventListener('click', (e) => {
+        if (hasMoved) {
+          e.preventDefault();
+          return;
+        }
+        if (index !== currentIndex) {
+          scrollToIndex(index);
+          startAutoplay();
+        }
+      });
+    });
+
+    // Hover detection for pause
+    wrapper.addEventListener('mouseenter', pauseAutoplay);
+    wrapper.addEventListener('mouseleave', resumeAutoplay);
+
+    // Track scroll event for live reactive opacity
+    let scrollTicking = false;
+    track.addEventListener('scroll', () => {
+      if (!scrollTicking) {
+        window.requestAnimationFrame(() => {
+          updateCardOpacities();
+          scrollTicking = false;
+        });
+        scrollTicking = true;
+      }
+    }, { passive: true });
+
+    // Initial trigger: center the first card so it starts sharp
+    window.addEventListener('resize', () => { scrollToIndex(currentIndex, false); updateCardOpacities(); });
+    scrollToIndex(0, false);
+    updateCardOpacities();
+    updatePagination(0);
+    startAutoplay();
+  })();
+</script>
+<!-- ========================================================================= -->
+<!-- BENEFITS SECTION: The Nexus Advantage                                     -->
+<!-- ========================================================================= -->
+<section class="w-full mx-auto scroll-mt-24 relative bg-[#0a0e18]" id="benefits"><div class="absolute inset-0 pointer-events-none select-none overflow-hidden z-0"><img loading="lazy" decoding="async" width="512" height="286" alt="Fondo ambiental cintas de luz" class="absolute left-0 top-0 w-full h-full object-cover pointer-events-none select-none object-center opacity-20" src="assets/img2/benefits-ambient.webp"><div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(rgba(10, 14, 24, 0.88) 0%, rgba(10, 14, 24, 0.78) 50%, rgba(10, 14, 24, 0.92) 100%), radial-gradient(circle at 15% 40%, rgba(76, 215, 246, 0.05) 0%, transparent 60%);"></div><div class="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-[#0a0e18] via-[#0a0e18]/70 to-transparent pointer-events-none"></div><div class="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-[#0a0e18] via-[#0a0e18]/70 to-transparent pointer-events-none"></div></div><div class="w-full pb-16 md:pb-24 max-w-[1360px] mx-auto px-4 md:px-8 pt-28 md:pt-36 relative z-10"><div class="flex flex-col items-start mb-6 md:mb-8"><div class="flex items-center gap-2 mb-2 font-label-caps text-label-caps text-tertiary tracking-widest uppercase"></div><h2 class="font-headline-lg text-3xl md:text-5xl font-bold text-white tracking-tight mt-2">Así trabajo contigo</h2><p class="font-body-lg text-[#c2c6d6] text-sm md:text-base max-w-2xl mt-3 leading-relaxed">Un desarrollador que te escucha, <span class="text-white font-semibold">construye por etapas</span> y te explica cada decisión en <span class="text-white font-semibold">lenguaje claro</span>, sin tecnicismos innecesarios.</p></div><div class="grid grid-cols-1 md:grid-cols-12 gap-6 mt-12 w-full"><div class="md:col-span-7 rounded-[28px] p-8 md:p-10 relative overflow-hidden bg-gradient-to-b from-white/[0.07] to-white/[0.02] backdrop-blur-xl border border-white/10 hover:border-cyan-400/40 transition-all duration-300 group shadow-2xl flex flex-col justify-between min-h-[290px]"><div class="flex items-center justify-between relative z-10"><div class="w-11 h-11 rounded-2xl bg-white/[0.04] border border-cyan-400/40 flex items-center justify-center text-tertiary"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div></div><div class="relative z-10"><div class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mt-6 font-display">1:1</div><h3 class="text-xl md:text-2xl font-bold text-white mt-1 tracking-tight">Trato directo contigo</h3><p class="font-body-md text-[#8c909f] text-sm md:text-base mt-2 leading-relaxed">Hablas con la persona que construye tu proyecto. Sin intermediarios, sin traspasos y sin que nadie te explique lo que otro hizo.</p></div><div class="pt-4 mt-6 border-t border-white/[0.06] flex items-center justify-between font-label-code text-xs text-cyan-200 relative z-10"><span class="inline-flex items-center gap-1.5">Sin intermediarios</span></div><div class="card-bottom-glow absolute bottom-0 right-0 w-48 h-48 rounded-full blur-3xl pointer-events-none transition-all duration-500 opacity-60" style="background: radial-gradient(circle, rgba(56, 189, 248, 0.25) 0%, transparent 70%);"></div><div class="card-dot-matrix absolute bottom-0 left-0 right-0 h-32 pointer-events-none opacity-30"></div></div><div class="md:col-span-5 rounded-[28px] p-8 md:p-10 relative overflow-hidden bg-gradient-to-b from-white/[0.07] to-white/[0.02] backdrop-blur-xl border border-white/10 hover:border-pink-500/50 transition-all duration-300 group shadow-2xl flex flex-col justify-between min-h-[290px]"><div class="flex items-center justify-between relative z-10"><div class="w-11 h-11 rounded-2xl bg-white/[0.04] border border-white/15 flex items-center justify-center text-secondary"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg></div></div><div class="relative z-10"><div class="text-3xl md:text-4xl font-extrabold text-white tracking-tight mt-6 font-display">Por fases</div><h3 class="text-xl md:text-2xl font-bold text-white mt-1 tracking-tight">Entregas por etapas</h3><p class="font-body-md text-[#8c909f] text-sm md:text-base mt-2 leading-relaxed">El proyecto se divide en pasos claros. Ves avances reales y das el visto bueno antes de avanzar al siguiente.</p></div><div class="pt-4 mt-6 border-t border-white/[0.06] flex items-center justify-between font-label-code text-xs text-secondary relative z-10"><span class="inline-flex items-center gap-1.5">Avances que puedes revisar</span></div><div class="card-bottom-glow absolute bottom-0 right-0 w-48 h-48 rounded-full blur-3xl pointer-events-none transition-all duration-500 opacity-60" style="background: radial-gradient(circle, rgba(139, 92, 246, 0.25) 0%, transparent 70%);"></div><div class="card-dot-matrix absolute bottom-0 left-0 right-0 h-32 pointer-events-none opacity-30"></div></div><div class="md:col-span-5 rounded-[28px] p-8 md:p-10 relative overflow-hidden bg-gradient-to-b from-white/[0.07] to-white/[0.02] backdrop-blur-xl border border-white/10 hover:border-pink-500/50 transition-all duration-300 group shadow-2xl flex flex-col justify-between min-h-[290px]"><div class="flex items-center justify-between relative z-10"><div class="w-11 h-11 rounded-2xl bg-white/[0.04] border border-white/15 flex items-center justify-center text-secondary"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><path d="m9 15 2 2 4-4"></path></svg></div></div><div class="relative z-10"><div class="text-3xl md:text-4xl font-extrabold text-white tracking-tight mt-6 font-display">Por escrito</div><h3 class="text-xl md:text-2xl font-bold text-white mt-1 tracking-tight">Precio y alcance claros</h3><p class="font-body-md text-[#8c909f] text-sm md:text-base mt-2 leading-relaxed">Antes de empezar acuerdas qué se construye, cuánto cuesta y en cuánto tiempo. Si algo cambia, lo hablamos antes, no después.</p></div><div class="pt-4 mt-6 border-t border-white/[0.06] flex items-center justify-between font-label-code text-xs text-secondary relative z-10"><span class="inline-flex items-center gap-1.5">Sin costos sorpresa</span></div><div class="card-bottom-glow absolute bottom-0 right-0 w-48 h-48 rounded-full blur-3xl pointer-events-none transition-all duration-500 opacity-60" style="background: radial-gradient(circle, rgba(139, 92, 246, 0.25) 0%, transparent 70%);"></div><div class="card-dot-matrix absolute bottom-0 left-0 right-0 h-32 pointer-events-none opacity-30"></div></div><div class="md:col-span-7 rounded-[28px] p-8 md:p-10 relative overflow-hidden bg-gradient-to-b from-white/[0.07] to-white/[0.02] backdrop-blur-xl border border-white/10 hover:border-cyan-400/40 transition-all duration-300 group shadow-2xl flex flex-col justify-between min-h-[290px]"><div class="flex items-center justify-between relative z-10"><div class="w-11 h-11 rounded-2xl bg-white/[0.04] border border-cyan-400/40 flex items-center justify-center text-tertiary"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24"><path d="M20.5 11H19V7a2 2 0 0 0-2-2h-4V3.5a2.5 2.5 0 0 0-5 0V5H4a2 2 0 0 0-2 2v3.8h1.5a2.5 2.5 0 0 1 0 5H2V20a2 2 0 0 0 2 2h3.8v-1.5a2.5 2.5 0 0 1 5 0V22H17a2 2 0 0 0 2-2v-4h1.5a2.5 2.5 0 0 0 0-5z"></path></svg></div></div><div class="relative z-10"><div class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mt-6 font-display">A tu medida</div><h3 class="text-xl md:text-2xl font-bold text-white mt-1 tracking-tight">Hecho para tu negocio</h3><p class="font-body-md text-[#8c909f] text-sm md:text-base mt-2 leading-relaxed">Nada de plantillas genéricas: cada sitio, app o automatización se diseña según cómo trabaja tu negocio, de menor a mayor complejidad.</p></div><div class="pt-4 mt-6 border-t border-white/[0.06] flex items-center justify-between font-label-code text-xs text-cyan-200 relative z-10"><span class="inline-flex items-center gap-1.5">Pensado para pymes y emprendedores</span></div><div class="card-bottom-glow absolute bottom-0 right-0 w-48 h-48 rounded-full blur-3xl pointer-events-none transition-all duration-500 opacity-60" style="background: radial-gradient(circle, rgba(56, 189, 248, 0.25) 0%, transparent 70%);"></div><div class="card-dot-matrix absolute bottom-0 left-0 right-0 h-32 pointer-events-none opacity-30"></div></div></div></div></section>
+<!-- ========================================================================= -->
+<!-- CASE STUDIES SECTION                                                      -->
+<!-- ========================================================================= -->
+<section class="w-full relative scroll-mt-24 overflow-hidden py-16 md:py-24 bg-[#0a0e18]" id="case-studies"><style>
+  .cs-glass-card {
+    transition: opacity 0.4s cubic-bezier(0.2, 0, 0, 1), transform 0.4s cubic-bezier(0.2, 0, 0, 1), filter 0.4s ease, border-color 0.3s ease;
+    scroll-snap-align: center;
+    cursor: grab;
+    user-select: none;
+  }
+  .cs-glass-card:active {
+    cursor: grabbing;
+  }
+  .cs-glass-card:hover {
+    border-color: rgba(255, 255, 255, 0.22);
+  }
+  .cs-carousel-mask {
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  }
+  @media (max-width: 768px) {
+    .cs-carousel-mask {
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+      mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+    }
+  }
+  .cs-dot {
+    transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  .cs-dot.active {
+    box-shadow: 0 0 12px rgba(76, 215, 246, 0.65), 0 0 20px rgba(139, 92, 246, 0.45);
+  }
+  .cs-dot .cs-dot-progress-bar {
+    width: 0%;
+    height: 100%;
+    border-radius: 9999px;
+    background: linear-gradient(90deg, #4cd7f6, #adc6ff);
+  }
+  .cs-dot.active .cs-dot-progress-bar {
+    animation: csDotProgressAnim var(--autoplay-duration, 5000ms) linear forwards;
+  }
+  .cs-dot.paused .cs-dot-progress-bar {
+    animation-play-state: paused;
+  }
+  @keyframes csDotProgressAnim {
+    0% { width: 0%; }
+    100% { width: 100%; }
+  }
+</style>
+<div class="w-full px-margin-mobile md:px-margin max-w-[1360px] mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+<div>
+
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-white tracking-tight">Casos de Estudio &amp; Modelos de Entrega</h2>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-6">
+<p class="font-body-lg text-body-lg text-[#8b8b99] max-w-md hidden sm:block">Suscripción integral, squads dedicados y entregas continuas semana a semana con cero fricción.</p>
+<div class="flex items-center gap-2">
+<button aria-label="Tarjeta anterior" class="w-11 h-11 rounded-full bg-white/[0.05] hover:bg-white/[0.12] border border-white/10 hover:border-cyan-400/40 text-white/80 hover:text-white flex items-center justify-center transition-all duration-200 active:scale-95 shadow-lg cursor-pointer" id="cs-prev-btn">
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</button>
+<button aria-label="Siguiente tarjeta" class="w-11 h-11 rounded-full bg-white/[0.05] hover:bg-white/[0.12] border border-white/10 hover:border-cyan-400/40 text-white/80 hover:text-white flex items-center justify-center transition-all duration-200 active:scale-95 shadow-lg cursor-pointer" id="cs-next-btn">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<div class="relative w-full group/carousel" id="cs-carousel-wrapper">
+<div class="cs-carousel-mask overflow-x-auto no-scrollbar pb-6 pt-2 px-4 sm:px-12 flex gap-[18px] cursor-grab active:cursor-grabbing select-none" id="cs-carousel-track" style="scroll-snap-type: x mandatory; scroll-behavior: smooth;">
+<!-- Card 1 (Caso de estudio) -->
+<div class="cs-glass-card w-[310px] sm:w-[340px] md:w-[360px] flex-shrink-0 min-h-[500px] md:min-h-[520px] rounded-[28px] p-6 md:p-7 flex flex-col justify-between border border-white/15 shadow-2xl relative overflow-hidden backdrop-blur-xl group select-none" data-card-index="0" style="background: linear-gradient(rgb(24, 28, 40) 0%, rgb(15, 19, 30) 100%); opacity: 0.98; transform: scale(0.998); filter: blur(0px);">
+<div class="relative z-10">
+<div class="flex items-center justify-between gap-3">
+<div class="w-[42px] h-[42px] rounded-full bg-white/[0.04] border border-white/10 flex items-center justify-center text-cyan-200 flex-shrink-0">
+<span class="material-symbols-outlined text-[21px]">travel_explore</span>
+</div>
+<span class="inline-block font-label-code text-[9px] uppercase tracking-widest text-cyan-200/80 font-semibold px-2.5 py-1 rounded-full border border-cyan-300/25 bg-cyan-400/[0.06]">Portafolio</span>
+</div>
+<h3 class="mt-4 font-display text-[24px] sm:text-[26px] font-semibold text-white tracking-tight leading-snug">Caño Cristales</h3>
+<p class="mt-1 font-body-sm text-[11px] leading-relaxed text-[#8c909f]">Viajes Ecocristal · Sitio web de turismo ecológico</p>
+</div>
+<div class="relative z-10 my-4 rounded-xl overflow-hidden border border-white/10 shadow-[0_18px_40px_-12px_rgba(0,0,0,0.85)]">
+<div class="flex items-center gap-1.5 px-3 py-2 bg-[#121724] border-b border-white/[0.07]">
+<span class="w-1.5 h-1.5 rounded-full bg-white/25"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-white/20"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-white/15"></span>
+</div>
+<img alt="Vista previa del sitio Caño Cristales" class="w-full h-auto block transition-transform duration-500 ease-out group-hover:scale-[1.04]" src="assets/img/portfolio-ecocristal.webp" width="900" height="500" loading="lazy" decoding="async">
+</div>
+<div class="relative z-10 space-y-3">
+<div class="flex flex-wrap gap-1.5">
+<span class="font-label-code text-[9px] uppercase tracking-wider text-white/60 px-2 py-1 rounded-md bg-white/[0.05] border border-white/[0.08]">WordPress</span>
+<span class="font-label-code text-[9px] uppercase tracking-wider text-white/60 px-2 py-1 rounded-md bg-white/[0.05] border border-white/[0.08]">ACF</span>
+<span class="font-label-code text-[9px] uppercase tracking-wider text-white/60 px-2 py-1 rounded-md bg-white/[0.05] border border-white/[0.08]">Responsive</span>
+<span class="font-label-code text-[9px] uppercase tracking-wider text-white/60 px-2 py-1 rounded-md bg-white/[0.05] border border-white/[0.08]">CF7</span>
+</div>
+<div class="flex items-center justify-between gap-2">
+<span class="font-body-sm text-[11px] text-[#c2c6d6]">5 páginas · Destinos, planes, galería</span>
+<span class="font-label-code text-[9px] uppercase tracking-wider text-white/35 whitespace-nowrap">No publicada</span>
+</div>
+</div>
+<div class="card-bottom-glow absolute bottom-0 left-0 right-0 h-44 pointer-events-none transition-all duration-300 opacity-60" style="background: radial-gradient(ellipse at bottom, rgba(76,215,246,0.4), transparent 70%);"></div>
+<div class="card-dot-matrix absolute bottom-0 left-0 right-0 h-32 pointer-events-none opacity-30"></div>
+</div>
+<!-- Card 1 -->
+<div class="cs-glass-card w-[290px] sm:w-[320px] md:w-[340px] flex-shrink-0 min-h-[500px] md:min-h-[520px] rounded-[28px] p-7 md:p-8 flex flex-col justify-between border border-white/[0.08] backdrop-blur-xl shadow-xl relative overflow-hidden group select-none" data-card-index="1" style="background: linear-gradient(rgb(28, 31, 42) 0%, rgb(23, 27, 38) 100%); opacity: 0.583; transform: scale(0.954); filter: blur(0px);">
+<div class="relative z-10 space-y-4 pt-2">
+<div class="w-[46px] h-[46px] rounded-full bg-white/[0.04] border border-white/10 flex items-center justify-center text-white mb-6">
+<span class="material-symbols-outlined text-[22px]">code</span>
+</div>
+<h3 class="font-display text-[30px] sm:text-[34px] md:text-[36px] font-medium text-white tracking-tight leading-[1.18]">Desarrollo de software bajo demanda</h3>
+</div>
+<div class="relative z-10 pt-8">
+<p class="font-body-md text-sm text-[#8c909f] font-normal leading-relaxed">Por un equipo de ingenieros senior y arquitectos certificados.</p>
+</div>
+<div class="card-bottom-glow absolute bottom-0 left-0 right-0 h-44 pointer-events-none transition-all duration-300 opacity-60" style="background: radial-gradient(ellipse at bottom, rgba(139,92,246,0.45), transparent 70%);"></div>
+<div class="card-dot-matrix absolute bottom-0 left-0 right-0 h-32 pointer-events-none opacity-30"></div>
+</div>
+<!-- Card 2 -->
+<div class="cs-glass-card w-[300px] sm:w-[330px] md:w-[350px] flex-shrink-0 min-h-[500px] md:min-h-[520px] rounded-[28px] p-7 md:p-8 flex flex-col justify-between border border-white/15 shadow-2xl relative overflow-hidden backdrop-blur-xl group select-none" data-card-index="2" style="background: radial-gradient(circle at 10% 50%, rgba(76, 215, 246, 0.08), transparent 50%), radial-gradient(circle at 90% 60%, rgba(139, 92, 246, 0.12), transparent 50%), rgb(10, 14, 24); opacity: 0.98; transform: scale(0.998); filter: blur(0px);">
+<div class="relative z-10 space-y-3">
+<h3 class="font-display text-[26px] sm:text-[28px] font-semibold text-primary tracking-tight leading-snug">Soluciones de software verdaderamente elásticas</h3>
+<p class="font-body-sm text-[12px] text-[#c2c6d6] leading-relaxed">Hemos diseñado un servicio integral para impulsar el crecimiento tecnológico con una suscripción ágil de tarifa plana.</p>
+</div>
+<div class="relative z-10 space-y-2.5 my-auto py-4">
+<div class="w-full py-3 px-4 rounded-xl bg-white/[0.04] border border-white/[0.06] text-center"><span class="font-body-md text-[13px] font-medium text-white tracking-wide">100% garantía de código auditable</span></div>
+<div class="w-full py-3 px-4 rounded-xl bg-white/[0.04] border border-white/[0.06] text-center"><span class="font-body-md text-[13px] font-medium text-white tracking-wide">Período de prueba de 14 días sin riesgo</span></div>
+<div class="w-full py-3 px-4 rounded-xl bg-white/[0.04] border border-white/[0.06] text-center"><span class="font-body-md text-[13px] font-medium text-white tracking-wide">Entregas semana a semana</span></div>
+<div class="w-full py-3 px-4 rounded-xl bg-white/[0.04] border border-white/[0.06] text-center"><span class="font-body-md text-[13px] font-medium text-white tracking-wide">Precios predecibles a tarifa plana</span></div>
+<div class="w-full py-3 px-4 rounded-xl bg-white/[0.04] border border-white/[0.06] text-center"><span class="font-body-md text-[13px] font-medium text-white tracking-wide">Cancela en cualquier momento</span></div>
+</div>
+<div class="card-bottom-glow absolute bottom-0 left-0 right-0 h-44 pointer-events-none transition-all duration-300 opacity-70" style="background: radial-gradient(ellipse at bottom, rgba(76,215,246,0.45), transparent 70%);"></div>
+<div class="card-dot-matrix absolute bottom-0 left-0 right-0 h-32 pointer-events-none opacity-30"></div>
+</div>
+<!-- Card 3 -->
+<div class="cs-glass-card w-[290px] sm:w-[320px] md:w-[340px] flex-shrink-0 min-h-[500px] md:min-h-[520px] rounded-[28px] p-7 md:p-8 flex flex-col justify-around border border-white/[0.08] backdrop-blur-xl shadow-xl relative overflow-hidden group select-none" data-card-index="3" style="background: linear-gradient(rgb(28, 31, 42) 0%, rgb(23, 27, 38) 100%); opacity: 0.624; transform: scale(0.958); filter: blur(0px);">
+<div class="relative z-10 space-y-2"><h3 class="font-display text-[22px] sm:text-[24px] font-medium text-white tracking-tight leading-snug">Solicita requerimientos técnicos desde tu dashboard</h3></div>
+<div class="relative z-10 space-y-2 pt-2"><h3 class="font-display text-[22px] sm:text-[24px] font-medium text-white tracking-tight leading-snug">Resultados demostrables en 3 días</h3></div>
+<div class="relative z-10 space-y-2 pt-2"><h3 class="font-display text-[22px] sm:text-[24px] font-medium text-white tracking-tight leading-snug">Revisiones y actualizaciones continuas sin límite</h3></div>
+<div class="card-bottom-glow absolute bottom-0 left-0 right-0 h-44 pointer-events-none transition-all duration-300 opacity-60" style="background: radial-gradient(ellipse at bottom, rgba(139,92,246,0.45), transparent 70%);"></div>
+<div class="card-dot-matrix absolute bottom-0 left-0 right-0 h-32 pointer-events-none opacity-30"></div>
+</div>
+<!-- Card 4 -->
+<div class="cs-glass-card w-[290px] sm:w-[320px] md:w-[340px] flex-shrink-0 min-h-[500px] md:min-h-[520px] rounded-[28px] p-7 md:p-8 flex flex-col justify-between border border-white/[0.06] backdrop-blur-xl shadow-xl relative overflow-hidden group select-none" data-card-index="4" style="background: linear-gradient(rgb(15, 19, 29) 0%, rgb(10, 14, 24) 100%); opacity: 0.28; transform: scale(0.92); filter: blur(1.3px);">
+<div class="relative z-10 space-y-4">
+<div class="font-display text-[20px] font-medium text-[#c2c6d6] tracking-tight">Características que te encantarán</div>
+<div class="space-y-6 pt-4">
+<div class="space-y-1"><div class="font-title-md text-[16px] font-semibold text-white">Crea solicitudes con facilidad</div><p class="font-body-sm text-[12px] text-[#8c909f] leading-relaxed">Define tareas técnicas y arquitecturas directamente en tu panel en menos de 5 minutos.</p></div>
+<div class="space-y-1"><div class="font-title-md text-[16px] font-semibold text-white">Actualizaciones por correo y seguimiento</div><p class="font-body-sm text-[12px] text-[#8c909f] leading-relaxed">Monitorea con precisión en qué tarea se encuentra trabajando tu equipo senior.</p></div>
+<div class="space-y-1"><div class="font-title-md text-[16px] font-semibold text-white">Invita a miembros ilimitados</div><p class="font-body-sm text-[12px] text-[#8c909f] leading-relaxed">Permite que cualquier stakeholder de tu organización envíe solicitudes y revise avances.</p></div>
+</div>
+</div>
+<div class="card-bottom-glow absolute bottom-0 left-0 right-0 h-44 pointer-events-none transition-all duration-300 opacity-60" style="background: radial-gradient(ellipse at bottom, rgba(56,189,248,0.45), transparent 70%);"></div>
+<div class="card-dot-matrix absolute bottom-0 left-0 right-0 h-32 pointer-events-none opacity-30"></div>
+</div>
+</div>
+<!-- Animated Pagination Indicators with Glow & Progress Fill -->
+<div class="flex items-center justify-center gap-3 mt-6 select-none" id="cs-pagination">
+<div class="cs-dot relative w-12 h-1.5 rounded-full bg-white/20 overflow-hidden" data-dot-index="0" style="width: 16px; background-color: rgba(255, 255, 255, 0.2);" title="Slide 1"><div class="cs-dot-progress-bar"></div></div>
+<div class="cs-dot relative w-4 h-1.5 rounded-full bg-white/20 overflow-hidden" data-dot-index="1" style="width: 16px; background-color: rgba(255, 255, 255, 0.2);" title="Slide 2"><div class="cs-dot-progress-bar"></div></div>
+<div class="cs-dot relative w-4 h-1.5 rounded-full bg-white/20 overflow-hidden" data-dot-index="2" style="width: 16px; background-color: rgba(255, 255, 255, 0.2);" title="Slide 3"><div class="cs-dot-progress-bar"></div></div>
+<div class="cs-dot relative w-4 h-1.5 rounded-full bg-white/20 overflow-hidden active" data-dot-index="3" style="width: 48px; background-color: rgba(255, 255, 255, 0.3);" title="Slide 4"><div class="cs-dot-progress-bar"></div></div>
+<div class="cs-dot relative w-4 h-1.5 rounded-full bg-white/20 overflow-hidden" data-dot-index="4" style="width: 16px; background-color: rgba(255, 255, 255, 0.2);" title="Slide 5"><div class="cs-dot-progress-bar"></div></div>
+</div>
+</div>
+</div>
+<script>
+  (function initSecondServicesCarousel() {
+    const track = document.getElementById('cs-carousel-track');
+    const wrapper = document.getElementById('cs-carousel-wrapper');
+    const prevBtn = document.getElementById('cs-prev-btn');
+    const nextBtn = document.getElementById('cs-next-btn');
+    const dots = document.querySelectorAll('#cs-pagination .cs-dot');
+    if (!track) return;
+
+    const cards = Array.from(track.querySelectorAll('.cs-glass-card'));
+    const totalCards = cards.length;
+    let currentIndex = 0;
+    const AUTOPLAY_DELAY = 4500;
+    let autoplayTimer = null;
+    let isPaused = false;
+
+    function updateCardOpacities() {
+      const trackRect = track.getBoundingClientRect();
+      const trackCenter = trackRect.left + trackRect.width / 2;
+      const visibleThreshold = trackRect.width * 0.55;
+
+      let closestIndex = 0;
+      let minDistance = Infinity;
+
+      cards.forEach((card, index) => {
+        const cardRect = card.getBoundingClientRect();
+        const cardCenter = cardRect.left + cardRect.width / 2;
+        const distFromCenter = Math.abs(trackCenter - cardCenter);
+
+        if (distFromCenter < minDistance) {
+          minDistance = distFromCenter;
+          closestIndex = index;
+        }
+
+        const normalizedDist = Math.min(distFromCenter / visibleThreshold, 1.25);
+        const opacity = Math.max(0.28, (1 - normalizedDist * 0.72)).toFixed(3);
+        const scale = Math.max(0.92, (1 - normalizedDist * 0.08)).toFixed(3);
+        const blur = (normalizedDist > 0.85) ? `${((normalizedDist - 0.85) * 6).toFixed(1)}px` : '0px';
+
+        card.style.opacity = opacity;
+        card.style.transform = `scale(${scale})`;
+        card.style.filter = `blur(${blur})`;
+      });
+
+      if (closestIndex !== currentIndex) {
+        currentIndex = closestIndex;
+        updatePagination(currentIndex);
+      }
+    }
+
+    function updatePagination(idx) {
+      dots.forEach((dot, i) => {
+        if (i === idx) {
+          dot.classList.add('active');
+          dot.style.width = '48px';
+          dot.style.backgroundColor = 'rgba(255, 255, 255, 0.3)';
+          const bar = dot.querySelector('.cs-dot-progress-bar');
+          if (bar) {
+            bar.style.animation = 'none';
+            void bar.offsetWidth;
+            bar.style.animation = '';
+          }
+        } else {
+          dot.classList.remove('active');
+          dot.style.width = '16px';
+          dot.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+        }
+      });
+    }
+
+    function scrollToIndex(index, smooth = true) {
+      if (index < 0) index = 0;
+      if (index >= totalCards) index = totalCards - 1;
+      const targetCard = cards[index];
+      if (!targetCard) return;
+
+      const trackRect = track.getBoundingClientRect();
+      const cardRect = targetCard.getBoundingClientRect();
+      const currentScroll = track.scrollLeft;
+      const targetScroll = currentScroll + (cardRect.left - trackRect.left) - (trackRect.width / 2 - cardRect.width / 2);
+
+      track.scrollTo({
+        left: targetScroll,
+        behavior: smooth ? 'smooth' : 'auto'
+      });
+      currentIndex = index;
+      updatePagination(currentIndex);
+    }
+
+    function startAutoplay() {
+      stopAutoplay();
+      dots.forEach(d => d.classList.remove('paused'));
+      autoplayTimer = setInterval(() => {
+        if (!isPaused) {
+          const nextIndex = (currentIndex + 1) % totalCards;
+          scrollToIndex(nextIndex);
+        }
+      }, AUTOPLAY_DELAY);
+    }
+
+    function stopAutoplay() {
+      if (autoplayTimer) {
+        clearInterval(autoplayTimer);
+        autoplayTimer = null;
+      }
+    }
+
+    function pauseAutoplay() {
+      isPaused = true;
+      dots.forEach(d => d.classList.add('paused'));
+    }
+
+    function resumeAutoplay() {
+      isPaused = false;
+      dots.forEach(d => d.classList.remove('paused'));
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        const target = Math.max(0, currentIndex - 1);
+        scrollToIndex(target);
+        startAutoplay();
+      });
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        const target = Math.min(totalCards - 1, currentIndex + 1);
+        scrollToIndex(target);
+        startAutoplay();
+      });
+    }
+
+    dots.forEach((dot) => {
+      dot.addEventListener('click', () => {
+        const idx = parseInt(dot.getAttribute('data-dot-index') || '0', 10);
+        scrollToIndex(idx);
+        startAutoplay();
+      });
+    });
+
+    let isDown = false;
+    let startX = 0;
+    let scrollStart = 0;
+    let hasMoved = false;
+
+    track.addEventListener('mousedown', (e) => {
+      isDown = true;
+      hasMoved = false;
+      startX = e.pageX - track.offsetLeft;
+      scrollStart = track.scrollLeft;
+      track.style.scrollBehavior = 'auto';
+      track.style.scrollSnapType = 'none';
+      pauseAutoplay();
+    });
+
+    window.addEventListener('mouseup', () => {
+      if (!isDown) return;
+      isDown = false;
+      track.style.scrollBehavior = 'smooth';
+      track.style.scrollSnapType = 'x mandatory';
+      updateCardOpacities();
+      setTimeout(resumeAutoplay, 800);
+    });
+
+    track.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - track.offsetLeft;
+      const walk = (x - startX) * 1.35;
+      if (Math.abs(walk) > 6) hasMoved = true;
+      track.scrollLeft = scrollStart - walk;
+      updateCardOpacities();
+    });
+
+    track.addEventListener('touchstart', (e) => {
+      pauseAutoplay();
+    }, { passive: true });
+
+    track.addEventListener('touchend', () => {
+      setTimeout(resumeAutoplay, 1200);
+    }, { passive: true });
+
+    cards.forEach((card, index) => {
+      card.addEventListener('click', (e) => {
+        if (hasMoved) {
+          e.preventDefault();
+          return;
+        }
+        if (index !== currentIndex) {
+          scrollToIndex(index);
+          startAutoplay();
+        }
+      });
+    });
+
+    if (wrapper) {
+      wrapper.addEventListener('mouseenter', pauseAutoplay);
+      wrapper.addEventListener('mouseleave', resumeAutoplay);
+    }
+
+    let scrollTicking = false;
+    track.addEventListener('scroll', () => {
+      if (!scrollTicking) {
+        window.requestAnimationFrame(() => {
+          updateCardOpacities();
+          scrollTicking = false;
+        });
+        scrollTicking = true;
+      }
+    }, { passive: true });
+
+    window.addEventListener('resize', () => { scrollToIndex(currentIndex, false); updateCardOpacities(); });
+    scrollToIndex(0, false);
+    updateCardOpacities();
+    updatePagination(0);
+    startAutoplay();
+  })();
+</script></section><section class="w-full scroll-mt-24 py-16 md:py-24 relative overflow-hidden bg-[#0a0e18]" id="proceso"><div class="absolute inset-0 pointer-events-none select-none overflow-hidden z-0 bg-[#0a0e18]"><img loading="lazy" decoding="async" width="512" height="286" alt="Atmósfera fluida de cintas azules" class="w-full h-full object-cover object-center select-none pointer-events-none opacity-60" src="assets/img2/proceso-ambient.webp"><div class="absolute inset-0 pointer-events-none bg-gradient-to-r from-[#0a0e18]/80 via-transparent to-[#0a0e18]/80"></div><div class="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-[#0a0e18] via-[#0a0e18]/80 to-transparent pointer-events-none"></div><div class="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-[#0a0e18] via-[#0a0e18]/80 to-transparent pointer-events-none"></div></div><div class="mx-auto px-margin-mobile md:px-margin relative z-10 max-w-[1360px]"><div class="relative rounded-[32px] overflow-hidden p-8 md:p-12 border border-white/10 shadow-2xl bg-[#0a0e18]/45 backdrop-blur-xl"><div class="card-dot-matrix absolute inset-0 opacity-15 pointer-events-none"></div><div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10"><div class="lg:col-span-5 flex flex-col justify-center gap-6 py-2"><div class="space-y-4"><h2 class="font-headline-lg text-3xl md:text-4xl font-bold text-white tracking-tight leading-tight pt-1">Así avanza tu proyecto, paso a paso</h2><p class="font-body-md text-base text-white/70 leading-relaxed max-w-md">Cuatro pasos, siempre en este orden: conversamos, te muestro cómo se verá, construyo por etapas y publico. Tú decides en cada paso antes de avanzar.</p></div><div class="pt-2"><a class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-white/[0.06] border border-cyan-400/40 text-white font-medium text-sm hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(56,189,248,0.25)] transition-all duration-300 w-fit backdrop-blur-md" href="#contact"><span class="">Cuéntame tu idea →</span></a></div></div><div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4 items-stretch"><div class="bg-[#0a0e18]/60 border border-white/10 rounded-2xl p-6 hover:border-cyan-400/40 hover:bg-white/[0.06] backdrop-blur-md transition-all duration-300 flex flex-col h-full"><div class="flex items-center gap-3 pb-4 border-b border-white/10"><div class="w-9 h-9 rounded-lg bg-white/[0.04] border border-white/10 flex items-center justify-center text-cyan-200 flex-shrink-0"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></div><div class="text-sm md:text-base font-bold text-white"><span class="text-cyan-200">01.</span> Conversamos</div></div><p class="mt-4 text-sm md:text-base text-white/70 leading-relaxed font-body-md">Escucho lo que necesitas y defino qué se construye. Una propuesta por escrito con alcance, precio y plazos. Si te convence y arrancamos.</p></div><div class="bg-[#0a0e18]/60 border border-white/10 rounded-2xl p-6 hover:border-cyan-400/40 hover:bg-white/[0.06] backdrop-blur-md transition-all duration-300 flex flex-col h-full"><div class="flex items-center gap-3 pb-4 border-b border-white/10"><div class="w-9 h-9 rounded-lg bg-white/[0.04] border border-white/10 flex items-center justify-center text-cyan-200 flex-shrink-0"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24"><rect height="14" rx="2" ry="2" width="20" x="2" y="3"></rect><line x1="8" x2="16" y1="21" y2="21"></line><line x1="12" x2="12" y1="17" y2="21"></line></svg></div><div class="text-sm md:text-base font-bold text-white"><span class="text-cyan-200">02.</span> Te muestro cómo se verá</div></div><p class="mt-4 text-sm md:text-base text-white/70 leading-relaxed font-body-md">Preparo una maqueta de las pantallas principales. Una vista previa que puedes recorrer. Qué cambiarías antes de construir.</p></div><div class="bg-[#0a0e18]/60 border border-white/10 rounded-2xl p-6 hover:border-cyan-400/40 hover:bg-white/[0.06] backdrop-blur-md transition-all duration-300 flex flex-col h-full"><div class="flex items-center gap-3 pb-4 border-b border-white/10"><div class="w-9 h-9 rounded-lg bg-white/[0.04] border border-white/10 flex items-center justify-center text-cyan-200 flex-shrink-0"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" x2="20" y1="19" y2="19"></line></svg></div><div class="text-sm md:text-base font-bold text-white"><span class="text-cyan-200">03.</span> Construyo por etapas</div></div><p class="mt-4 text-sm md:text-base text-white/70 leading-relaxed font-body-md">Desarrollo el proyecto en partes. Avances que puedes probar al terminar cada etapa. Si cada etapa está bien o necesita ajustes.</p></div><div class="bg-[#0a0e18]/60 border border-white/10 rounded-2xl p-6 hover:border-cyan-400/40 hover:bg-white/[0.06] backdrop-blur-md transition-all duration-300 flex flex-col h-full"><div class="flex items-center gap-3 pb-4 border-b border-white/10"><div class="w-9 h-9 rounded-lg bg-white/[0.04] border border-white/10 flex items-center justify-center text-cyan-200 flex-shrink-0"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div><div class="text-sm md:text-base font-bold text-white"><span class="text-cyan-200">04.</span> Publico y te entrego</div></div><p class="mt-4 text-sm md:text-base text-white/70 leading-relaxed font-body-md">Lo pongo en línea y te explico cómo usarlo. Todo funcionando, con el código y los accesos a tu nombre. Nada: queda en tus manos.</p></div></div></div></div></div></section><section class="w-full px-margin-mobile md:px-margin scroll-mt-24 bg-[#0a0e18]" id="faq">
+<div class="w-full py-12 md:py-16 max-w-4xl mx-auto">
+<div class="flex flex-col items-start mb-10 md:mb-14"><span class="text-[11px] font-label-caps uppercase tracking-widest text-white/50 mb-3 block font-semibold">PREGUNTAS FRECUENTES</span><h2 class="font-headline-lg text-3xl md:text-4xl text-white font-semibold tracking-tight">Dudas frecuentes antes de empezar</h2><p class="font-body-lg text-white/60 text-base md:text-lg max-w-2xl mt-3 font-normal leading-relaxed">Respuestas claras sobre como trabajaremos juntos, tiempos, entregas y propiedad de tu proyecto.</p></div>
+<div class="space-y-4"><details class="group rounded-2xl border border-white/10 bg-white/[0.02] transition-colors duration-200 hover:border-white/20 hover:bg-white/[0.04] overflow-hidden"><summary class="flex cursor-pointer items-center justify-between p-6 md:p-7 text-white font-title-md text-base md:text-lg font-medium select-none list-none [&amp;::-webkit-details-marker]:hidden"><span class="">¿Como es el proceso de trabajo una vez que iniciamos?</span><span class="material-symbols-outlined text-white/60 group-open:rotate-180 transition-transform duration-300 text-[22px] flex-shrink-0 ml-4">expand_more</span></summary><div class="px-6 pb-6 md:px-7 md:pb-7 pt-0 text-white/70 font-body-md text-sm md:text-base leading-relaxed border-t border-white/[0.06] mt-1"><p class="pt-4">Trabajamos en comunicacion directa por WhatsApp, correo o videollamada. Dividimos el proyecto en etapas claras; al final de cada una te muestro el avance funcionando para que lo pruebes y des tu visto bueno antes de pasar a la siguiente.</p></div></details><details class="group rounded-2xl border border-white/10 bg-white/[0.02] transition-colors duration-200 hover:border-white/20 hover:bg-white/[0.04] overflow-hidden"><summary class="flex cursor-pointer items-center justify-between p-6 md:p-7 text-white font-title-md text-base md:text-lg font-medium select-none list-none [&amp;::-webkit-details-marker]:hidden"><span class="">¿De quien es el codigo y el proyecto cuando terminamos?</span><span class="material-symbols-outlined text-white/60 group-open:rotate-180 transition-transform duration-300 text-[22px] flex-shrink-0 ml-4">expand_more</span></summary><div class="px-6 pb-6 md:px-7 md:pb-7 pt-0 text-white/70 font-body-md text-sm md:text-base leading-relaxed border-t border-white/[0.06] mt-1"><p class="pt-4">100% tuyo. Al finalizar el proyecto te entrego todos los accesos, repositorios, bases de datos y dominios a tu nombre. No quedas atado a contratos forzosos ni licencias ocultas.</p></div></details><details class="group rounded-2xl border border-white/10 bg-white/[0.02] transition-colors duration-200 hover:border-white/20 hover:bg-white/[0.04] overflow-hidden"><summary class="flex cursor-pointer items-center justify-between p-6 md:p-7 text-white font-title-md text-base md:text-lg font-medium select-none list-none [&amp;::-webkit-details-marker]:hidden"><span class="">¿Cuanto tiempo toma tener una primera version lista?</span><span class="material-symbols-outlined text-white/60 group-open:rotate-180 transition-transform duration-300 text-[22px] flex-shrink-0 ml-4">expand_more</span></summary><div class="px-6 pb-6 md:px-7 md:pb-7 pt-0 text-white/70 font-body-md text-sm md:text-base leading-relaxed border-t border-white/[0.06] mt-1"><p class="pt-4">Depende de la complejidad: un sitio web o una automatizacion puntual puede estar lista en 1 a 2 semanas. Una aplicacion web a medida o un agente de IA conectado a tus sistemas suele tomar entre 3 y 6 semanas. Desde el primer dia tendras un cronograma claro.</p></div></details><details class="group rounded-2xl border border-white/10 bg-white/[0.02] transition-colors duration-200 hover:border-white/20 hover:bg-white/[0.04] overflow-hidden"><summary class="flex cursor-pointer items-center justify-between p-6 md:p-7 text-white font-title-md text-base md:text-lg font-medium select-none list-none [&amp;::-webkit-details-marker]:hidden"><span class="">¿Que pasa si necesito cambios o soporte despues de lanzar?</span><span class="material-symbols-outlined text-white/60 group-open:rotate-180 transition-transform duration-300 text-[22px] flex-shrink-0 ml-4">expand_more</span></summary><div class="px-6 pb-6 md:px-7 md:pb-7 pt-0 text-white/70 font-body-md text-sm md:text-base leading-relaxed border-t border-white/[0.06] mt-1"><p class="pt-4">Cada entrega incluye un periodo de garantia para ajustar cualquier detalle tecnico. Ademas, si tu negocio crece y quieres agregar nuevas funciones o necesitas mantenimiento continuo, podemos acordar soporte mensual o por etapas.</p></div></details><details class="group rounded-2xl border border-white/10 bg-white/[0.02] transition-colors duration-200 hover:border-white/20 hover:bg-white/[0.04] overflow-hidden"><summary class="flex cursor-pointer items-center justify-between p-6 md:p-7 text-white font-title-md text-base md:text-lg font-medium select-none list-none [&amp;::-webkit-details-marker]:hidden"><span class="">¿Necesito saber de programacion o tener todo definido para empezar?</span><span class="material-symbols-outlined text-white/60 group-open:rotate-180 transition-transform duration-300 text-[22px] flex-shrink-0 ml-4">expand_more</span></summary><div class="px-6 pb-6 md:px-7 md:pb-7 pt-0 text-white/70 font-body-md text-sm md:text-base leading-relaxed border-t border-white/[0.06] mt-1"><p class="pt-4">Para nada. Mi trabajo es escucharte, entender como funciona tu negocio y traducir tus ideas en una solucion practica. Yo te guio paso a paso sobre que tecnologia conviene mas segun tu presupuesto y objetivos.</p></div></details></div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- CONTACT SECTION & CONSULTATION FORM                                       -->
+<!-- ========================================================================= -->
+<section class="w-full scroll-mt-24 relative overflow-hidden pt-16 md:pt-24 pb-20 md:pb-28 bg-[#0a0e18]" id="contact"><div class="absolute inset-0 pointer-events-none select-none overflow-hidden z-0 bg-[#0a0e18]"><img alt="Atmósfera fluida de fondo" class="w-full h-full object-cover object-center select-none pointer-events-none opacity-70" src="assets/img/bg-revert-2560.webp" srcset="assets/img/bg-revert-1280.webp 1280w, assets/img/bg-revert-2560.webp 2560w" sizes="100vw" loading="lazy" decoding="async"><div class="absolute inset-0 pointer-events-none bg-gradient-to-r from-[#0a0e18]/70 via-transparent to-[#0a0e18]/70"></div><div class="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-[#0a0e18] via-[#0a0e18]/80 to-transparent pointer-events-none"></div></div><style class="">
+  @keyframes float-contact-card {
+    0%, 100% { transform: translateY(0px) rotate(-1deg); }
+    50% { transform: translateY(-8px) rotate(1.5deg); }
+  }
+  @keyframes pulse-contact-tag {
+    0%, 100% { transform: scale(1) translateY(0); }
+    50% { transform: scale(1.04) translateY(-3px); }
+  }
+  .animate-contact-float {
+    animation: float-contact-card 6s ease-in-out infinite;
+  }
+  .animate-tag-bob {
+    animation: pulse-contact-tag 4.5s ease-in-out infinite;
+  }
+  .contact-input-focus:focus {
+    border-color: #8b5cf6 !important;
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.35) !important;
+    outline: none !important;
+  }
+  .contact-radio-card:has(input:checked) {
+    background: linear-gradient(135deg, rgba(139,92,246,0.3) 0%, rgba(56,189,248,0.2) 100%) !important;
+    border-color: #8b5cf6 !important;
+    color: #ffffff !important;
+    box-shadow: 0 0 16px rgba(139,92,246,0.4) !important;
+  }
+  .contact-checkbox-card:has(input:checked) {
+    background: linear-gradient(135deg, rgba(139,92,246,0.3) 0%, rgba(56,189,248,0.2) 100%) !important;
+    border-color: #8b5cf6 !important;
+    color: #ffffff !important;
+    box-shadow: 0 0 16px rgba(139,92,246,0.4) !important;
+  }
+  .social-circle-btn:hover .tooltip-label {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+</style>
+<div class="relative overflow-hidden p-8 md:p-12 shadow-2xl backdrop-blur-sm max-w-[1360px] mx-auto px-margin-mobile md:px-margin z-10" style="background: linear-gradient(rgba(10, 14, 24, 0.45) 0%, rgba(10, 14, 24, 0.32) 100%);">
+<!-- Atmospheric glows & fine matrix overlay -->
+<div class="absolute -top-24 -left-20 w-[550px] h-[450px] rounded-full blur-[130px] pointer-events-none" style="background: radial-gradient(circle, rgba(90, 174, 245, 0.2) 0%, rgba(47, 123, 224, 0.12) 50%, transparent 70%);"></div>
+<div class="absolute -bottom-24 -right-20 w-[550px] h-[450px] rounded-full blur-[130px] pointer-events-none" style="background: rgba(56, 189, 248, 0.16);"></div>
+<div class="card-dot-matrix absolute inset-0 opacity-20 pointer-events-none"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 relative z-10">
+<!-- Left Column: Agency Info, 3D Floating Terminal & Highlights -->
+<div class="lg:col-span-5 flex flex-col justify-between space-y-8">
+<div><div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 mb-4"></div><h2 class="font-headline-lg text-3xl md:text-4xl text-white font-semibold tracking-tight leading-tight mb-4">¿Listo para darle forma a tu proyecto?</h2><p class="font-body-lg text-body-lg text-[#8b8b99] leading-relaxed">Cuentame que tienes en mente o que proceso de tu negocio quieres mejorar. Te respondere personalmente en menos de 24 horas para evaluar como construirlo.</p></div>
+<!-- 3D Floating Glass Terminal Illustration -->
+<div class="relative py-4 flex items-center justify-center"><div class="relative w-full max-w-[340px] h-[190px] rounded-[24px] p-5 flex flex-col justify-between text-white overflow-visible animate-contact-float transition-all duration-300" style="background: linear-gradient(135deg, rgba(47, 123, 224, 0.92) 0%, rgba(30, 86, 160, 0.85) 50%, rgba(90, 174, 245, 0.9) 100%); box-shadow: rgba(90, 174, 245, 0.3) 0px 0px 60px, rgba(0, 0, 0, 0.6) 0px 20px 40px, rgba(255, 255, 255, 0.4) 0px 1px 2px inset; border: 1px solid rgba(140, 200, 255, 0.4);"><div class="absolute inset-0 rounded-[24px] bg-gradient-to-tr from-transparent via-white/20 to-white/10 pointer-events-none"></div><div class="absolute -top-3.5 -left-3 animate-tag-bob px-3 py-1 rounded-full text-[11px] font-label-code font-bold tracking-wide text-white border border-[#8CC8FF]/40 backdrop-blur-md shadow-[0_8px_20px_rgba(47,123,224,0.6)] z-20" style="background: linear-gradient(135deg, #2F7BE0, #5AAEF5); transform: rotate(-8deg);">Trato directo 1 a 1</div><div class="absolute -bottom-3 -right-3 animate-tag-bob px-3 py-1 rounded-full text-[11px] font-label-code font-bold tracking-wide text-[#001a42] border border-white/50 backdrop-blur-md shadow-[0_8px_20px_rgba(90,174,245,0.6)] z-20" style="background: linear-gradient(135deg, #8CC8FF, #5AAEF5); transform: rotate(6deg); animation-delay: 1.2s;">Respuesta en 24h</div><div class="flex items-center justify-between relative z-10"><div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-white/70"></span><span class="w-2.5 h-2.5 rounded-full bg-white/40"></span><span class="w-2.5 h-2.5 rounded-full bg-white/40"></span></div><span class="font-label-code text-[11px] text-white/90 uppercase tracking-widest font-semibold">CANAL DIRECTO</span></div><div class="relative z-10 font-label-code text-[12px] space-y-1.5 text-white/95 my-auto bg-black/20 p-2.5 rounded-xl border border-white/15 backdrop-blur-sm"><div class="flex items-center gap-2"><span class="text-[#8CC8FF]"></span><span class="">iniciar_proyecto()</span></div><div class="flex items-center gap-2 text-white/80"><span class="text-emerald-300"></span><span class="">Desarrollador asignado</span></div></div><div class="flex items-center justify-between relative z-10 text-[11px] font-label-code text-white/90 pt-1"><span class="">SIN INTERMEDIARIOS</span><span class="flex items-center gap-1 font-semibold text-white"><span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>DISPONIBLE</span></div></div></div>
+<!-- Global Hubs & Assurance Info Items -->
+<div class="space-y-4 pt-2"><div class="flex items-start gap-3.5"><div class="w-10 h-10 rounded-full bg-white/[0.04] border border-white/10 flex items-center justify-center text-primary flex-shrink-0"><span class="material-symbols-outlined text-[19px]">location_on</span></div><div><div class="font-title-md text-title-md text-white font-medium">Trabajo 100% Remoto</div><div class="font-label-code text-body-sm text-[#8b8b99] mt-0.5">Colombia. Atencion a clientes en toda Latinoamerica.</div></div></div><div class="flex items-start gap-3.5"><div class="w-10 h-10 rounded-full bg-white/[0.04] border border-white/10 flex items-center justify-center text-tertiary flex-shrink-0"><span class="material-symbols-outlined text-[19px]">mail</span></div><div><div class="font-title-md text-title-md text-white font-medium">Correo Directo</div><a class="font-label-code text-body-sm text-tertiary hover:underline mt-0.5 inline-block" href="mailto:contacto@brytanlabs.dev">contacto@brytanlabs.dev</a></div></div><div class="flex items-start gap-3.5"><div class="w-10 h-10 rounded-full bg-white/[0.04] border border-white/10 flex items-center justify-center text-primary flex-shrink-0" style="color: rgb(90, 174, 245);"><span class="material-symbols-outlined text-[19px]">verified</span></div><div><div class="font-title-md text-title-md text-white font-medium">Propiedad Total</div><div class="font-body-sm text-body-sm text-[#8b8b99] mt-0.5">Tu codigo, accesos y datos son 100% tuyos desde el primer dia.</div></div></div></div>
+<!-- Quote Box -->
+<div class="p-4 rounded-xl bg-white/[0.02] border border-white/[0.06] font-label-code text-body-sm text-[#8b8b99]">"Trabajar directo con quien escribe el codigo ahorra semanas de reuniones. Entendio exactamente lo que nuestro negocio necesitaba automatizar desde la primera llamada."<div class="text-white font-semibold mt-2 text-right font-body-sm">Cliente verificado, Sector Servicios</div></div>
+</div>
+<!-- Right Column: Glass Consultation Form -->
+<div class="lg:col-span-7 rounded-[24px] bg-white/[0.03] border border-white/[0.08] backdrop-blur-xl p-6 md:p-8 flex flex-col justify-between shadow-2xl">
+<form class="space-y-6" onsubmit="event.preventDefault(); alert('Inquiry sent! A Principal Engineer will contact you within 24 hours.');"><div class="grid grid-cols-1 sm:grid-cols-2 gap-4"><div><label class="block font-label-code text-body-sm text-[#8b8b99] mb-2" for="fullName">Nombre Completo <span class="text-error">*</span></label><input class="contact-input-focus w-full px-4 py-3 rounded-xl bg-[#0a0a10]/80 border border-white/10 text-white placeholder:text-outline font-body-md transition-all" id="fullName" placeholder="Tu nombre" required="" type="text"></div><div><label class="block font-label-code text-body-sm text-[#8b8b99] mb-2" for="workEmail">Correo Electronico <span class="text-error">*</span></label><input class="contact-input-focus w-full px-4 py-3 rounded-xl bg-[#0a0a10]/80 border border-white/10 text-white placeholder:text-outline font-body-md transition-all" id="workEmail" placeholder="tucorreo@empresa.com" required="" type="email"></div></div><div class=""><span class="block font-label-code text-body-sm text-[#8c909f] mb-2.5">Servicio Requerido</span><div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5" id="services-chip-group"><label class="cursor-pointer group block"><div class="contact-checkbox-card is-active h-11 px-3 flex items-center justify-center rounded-xl font-label-code text-body-sm select-none whitespace-nowrap"><input checked="" class="sr-only" name="services" type="checkbox"><span class="">Sitios y Apps</span></div></label><label class="cursor-pointer group block"><div class="contact-checkbox-card h-11 px-3 flex items-center justify-center rounded-xl font-label-code text-body-sm select-none whitespace-nowrap"><input class="sr-only" name="services" type="checkbox"><span class="">Agentes de IA</span></div></label><label class="cursor-pointer group block"><div class="contact-checkbox-card h-11 px-3 flex items-center justify-center rounded-xl font-label-code text-body-sm select-none whitespace-nowrap"><input class="sr-only" name="services" type="checkbox"><span class="">Automatizacion</span></div></label><label class="cursor-pointer group block"><div class="contact-checkbox-card h-11 px-3 flex items-center justify-center rounded-xl font-label-code text-body-sm select-none whitespace-nowrap"><input class="sr-only" name="services" type="checkbox"><span class="">Integraciones</span></div></label></div></div><div class=""><span class="block font-label-code text-body-sm text-[#8c909f] mb-2.5">Etapa del proyecto</span><div class="grid grid-cols-3 gap-3" id="stage-radio-group"><label class="cursor-pointer group block"><div class="contact-radio-card h-11 px-3 flex items-center justify-center rounded-xl font-label-code text-body-sm select-none whitespace-nowrap"><input class="sr-only" name="budget" type="radio" value="idea"><span class="">Idea inicial</span></div></label><label class="cursor-pointer group block"><div class="contact-radio-card is-active h-11 px-3 flex items-center justify-center rounded-xl font-label-code text-body-sm select-none whitespace-nowrap"><input checked="" class="sr-only" name="budget" type="radio" value="mejora"><span class="">Mejorar proceso</span></div></label><label class="cursor-pointer group block"><div class="contact-radio-card h-11 px-3 flex items-center justify-center rounded-xl font-label-code text-body-sm select-none whitespace-nowrap"><input class="sr-only" name="budget" type="radio" value="medida"><span class="">A medida</span></div></label></div></div><div class=""><label class="block font-label-code text-body-sm text-[#8b8b99] mb-2" for="projectDetails">Detalles del proyecto</label><textarea class="contact-input-focus w-full px-4 py-3 rounded-xl bg-[#0a0a10]/80 border border-white/10 text-white placeholder:text-outline font-body-md transition-all resize-none" id="projectDetails" placeholder="Describe brevemente que quieres construir, que problema buscas resolver o que herramientas usas actualmente..." rows="4"></textarea></div><div class=""><button class="w-full py-4 rounded-full text-white font-headline-sm text-title-lg font-semibold tracking-tight transition-all duration-300 hover:shadow-[0_0_35px_rgba(56,189,248,0.55)] hover:brightness-110 active:scale-[0.98] flex items-center justify-center gap-2 cursor-pointer" style="background: linear-gradient(135deg, rgb(47, 123, 224) 0%, rgb(90, 174, 245) 100%); box-shadow: rgba(47, 123, 224, 0.45) 0px 0px 25px;" type="submit"><span class="">Enviar Mensaje</span><span class="material-symbols-outlined text-[20px]">arrow_forward</span></button><p class="font-label-code text-[11px] text-[#8b8b99] text-center mt-3">Trato directo y confidencial. Respuesta directa sin intermediarios.</p></div></form><script class="">
+  (function initContactChipsInteractive() {
+    const serviceCards = document.querySelectorAll('#services-chip-group .contact-checkbox-card');
+    serviceCards.forEach(card => {
+      const input = card.querySelector('input[type="checkbox"]');
+      card.parentElement.addEventListener('click', (e) => {
+        // Permitir que el input cambie naturalmente y sincronizar la clase activa
+        setTimeout(() => {
+          if (input.checked) {
+            card.classList.add('is-active');
+          } else {
+            card.classList.remove('is-active');
+          }
+        }, 0);
+      });
+    });
+
+    const stageCards = document.querySelectorAll('#stage-radio-group .contact-radio-card');
+    stageCards.forEach(card => {
+      const input = card.querySelector('input[type="radio"]');
+      card.parentElement.addEventListener('click', (e) => {
+        setTimeout(() => {
+          stageCards.forEach(c => {
+            const inp = c.querySelector('input[type="radio"]');
+            if (inp && inp.checked) {
+              c.classList.add('is-active');
+            } else {
+              c.classList.remove('is-active');
+            }
+          });
+        }, 0);
+      });
+    });
+  })();
+</script>
+<!-- Circular Social Channels Row with Brand Glows & Tooltips -->
+<div class="pt-8 mt-6 border-t border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-4"><div class="text-left"><span class="font-label-code text-[11px] uppercase tracking-wider text-white/80 block font-semibold">Contacto directo</span><span class="font-body-sm text-body-sm text-[#8b8b99]">Escribeme por WhatsApp o sigueme en redes</span></div><div class="flex items-center gap-4"><div class="relative social-circle-btn flex flex-col items-center"><a aria-label="WhatsApp" class="w-14 h-14 rounded-full bg-white/[0.05] border border-white/10 hover:border-[#25D366]/50 flex items-center justify-center text-white/80 hover:text-white hover:bg-[#25D366]/15 hover:shadow-[0_0_24px_rgba(37,211,102,0.6)] transition-all duration-300 active:scale-95 cursor-pointer" href="https://whatsapp.com" rel="noopener noreferrer" target="_blank"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></a><span class="tooltip-label opacity-0 pointer-events-none transition-all duration-200 absolute -top-8 px-2.5 py-1 rounded bg-[#0a0a10] border border-white/15 text-[10px] font-label-code text-white whitespace-nowrap shadow-lg">WhatsApp</span></div><div class="relative social-circle-btn flex flex-col items-center"><a aria-label="Instagram" class="w-14 h-14 rounded-full bg-white/[0.05] border border-white/10 hover:border-pink-500/50 flex items-center justify-center text-white/80 hover:text-white hover:bg-gradient-to-tr hover:from-amber-500/20 hover:via-pink-500/20 hover:to-purple-500/20 hover:shadow-[0_0_24px_rgba(236,72,153,0.6)] transition-all duration-300 active:scale-95 cursor-pointer" href="https://instagram.com" rel="noopener noreferrer" target="_blank"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a><span class="tooltip-label opacity-0 pointer-events-none transition-all duration-200 absolute -top-8 px-2.5 py-1 rounded bg-[#0a0a10] border border-white/15 text-[10px] font-label-code text-white whitespace-nowrap shadow-lg">Instagram</span></div><div class="relative social-circle-btn flex flex-col items-center"><a aria-label="Facebook" class="w-14 h-14 rounded-full bg-white/[0.05] border border-white/10 hover:border-[#1877F2]/50 flex items-center justify-center text-white/80 hover:text-white hover:bg-[#1877F2]/15 hover:shadow-[0_0_24px_rgba(24,119,242,0.6)] transition-all duration-300 active:scale-95 cursor-pointer" href="https://facebook.com" rel="noopener noreferrer" target="_blank"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg></a><span class="tooltip-label opacity-0 pointer-events-none transition-all duration-200 absolute -top-8 px-2.5 py-1 rounded bg-[#0a0a10] border border-white/15 text-[10px] font-label-code text-white whitespace-nowrap shadow-lg">Facebook</span></div></div></div>
+</div>
+</div>
+</div></section>
+</main>
+<!-- ========================================================================= -->
+<!-- SHARED COMPONENT: Footer (Exact match from JSON & Brand Tokens)          -->
+<!-- ========================================================================= -->
+<footer class="docked full-width bottom bg-surface-container-lowest dark:bg-surface-container-lowest"><div class="relative w-full overflow-hidden bg-black text-white pt-20 pb-10"><div class="absolute inset-0 pointer-events-none select-none overflow-hidden"><div class="absolute top-1/2 left-0 right-0 h-40 -translate-y-1/2 bg-tech-grid opacity-30"></div><div class="absolute top-[42%] left-0 right-0 h-24 bg-gradient-to-r from-cyan-500/0 via-[#38bdf8]/25 to-purple-500/0 blur-2xl"></div><div class="absolute top-[48%] left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#38bdf8]/60 to-transparent shadow-[0_0_15px_#38bdf8]"></div><div class="card-dot-matrix absolute inset-0 opacity-20"></div></div><div class="relative z-10 max-w-[1360px] mx-auto px-margin-mobile md:px-margin flex flex-col justify-between min-h-[520px]"><div class="flex flex-col md:flex-row justify-between items-start gap-10"><div class="max-w-md"><p class="font-body-md text-white/80 leading-relaxed tracking-normal">Desarrollo de software a medida, aplicaciones web y agentes de inteligencia artificial disenados para impulsar y automatizar tu negocio.</p><div><br></div><p></p></div><nav class="flex flex-wrap items-center gap-8 font-label-code text-[12px] tracking-widest uppercase text-white/70"><a class="hover:text-white transition-colors duration-200 hover:drop-shadow-[0_0_8px_rgba(76,215,246,0.6)]" href="#contact">CONTACTO</a><a class="hover:text-white transition-colors duration-200 hover:drop-shadow-[0_0_8px_rgba(76,215,246,0.6)]" href="#case-studies"><span class="relative z-10 font-medium">Casos de Estudio</span></a><a class="hover:text-white transition-colors duration-200 hover:drop-shadow-[0_0_8px_rgba(76,215,246,0.6)]" href="#benefits"><span class="relative z-10 font-medium">Beneficios</span></a><a class="hover:text-white transition-colors duration-200 hover:drop-shadow-[0_0_8px_rgba(76,215,246,0.6)]" href="#services"><span class="relative z-10 font-medium">Servicios</span></a></nav></div><div class="my-auto py-12 flex items-center gap-4 sm:gap-6 md:gap-8 overflow-hidden select-none"><div class="flex-shrink-0 flex items-center"><img loading="lazy" decoding="async" width="256" height="256" alt="Brytan Labs Logo" class="h-14 sm:h-20 md:h-28 lg:h-32 w-auto object-contain" src="assets/img2/logo-mark-256.webp"></div><div class="flex-1 flex items-baseline"><h2 class="font-display font-bold text-white tracking-tighter leading-none whitespace-nowrap" style="font-size: clamp(34px, 10.5vw, 142px);">Brytan Labs</h2></div></div><div class="pt-8 border-t border-white/[0.08] flex flex-col md:flex-row items-center justify-between gap-4 font-label-code text-[11px] text-white/60 tracking-wider uppercase"><div class="text-center md:text-left"><span class="">© 2026 BRYTAN LABS. TODOS LOS DERECHOS RESERVADOS. ARQUITECTADO PARA ESCALAR.</span></div><div class="text-center"></div><div class="flex items-center gap-6"><a class="hover:text-white transition-colors duration-150" href="#privacy">Terminos de servicio</a><a class="hover:text-white transition-colors duration-150" href="#privacy">Politica de privacidad</a></div></div></div></div></footer>
+
+
+
+
+
+
+</body></html>
